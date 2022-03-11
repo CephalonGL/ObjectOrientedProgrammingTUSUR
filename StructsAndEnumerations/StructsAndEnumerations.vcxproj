@@ -139,9 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="StructsAndEnumerations.cpp" />
+    <ClCompile Include="DemoStructs.cpp" />
+    <ClCompile Include="DemoExceptions.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DemoStructs.h" />
+    <ClInclude Include="DemoExceptions.h" />
+    <ClInclude Include="Includes.h" />
     <ClInclude Include="Structs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
