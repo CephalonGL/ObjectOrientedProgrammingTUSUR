@@ -14,23 +14,23 @@ struct Flight
 {
 	string DeparturePoint;
 	string DestinationPoint;
-	int FlightDurationMinutes;
+	unsigned int FlightDurationMinutes;
 };
 
 struct Movie
 {
 	string Name;
-	int DurationMinutes;
-	int ReleaseYear;
+	unsigned int DurationMinutes;
+	unsigned int ReleaseYear;
 	string Genre;
 	float Rating;
 };
 
 struct Time
 {
-	int Hours;
-	int Minutes;
-	int Seconds;
+	unsigned int Hours;
+	unsigned int Minutes;
+	unsigned int Seconds;
 };
 
 struct Contact
@@ -45,15 +45,15 @@ struct Song
 {
 	string Name;
 	string Author;
-	int DurationSeconds;
+	unsigned int DurationSeconds;
 };
 
 struct Subject
 {
 	string Name;
 	string Code;
-	int TotalDurationHours;
-	int PracticeDurationHours;
-	int LectureDurationHours;
-	int LaboratoryDurationHours;
+	unsigned int TotalDurationHours;
+	unsigned int PracticeDurationHours;
+	unsigned int LectureDurationHours;
+	unsigned int LaboratoryDurationHours;
 };

@@ -5,3 +5,4 @@
 #include "DemoStructs.h"
 #include "DemoExceptions.h"
 #include <string>
+#include "../Console/Console.h"
