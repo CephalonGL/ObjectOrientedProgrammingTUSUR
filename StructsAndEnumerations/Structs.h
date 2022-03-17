@@ -22,7 +22,7 @@ struct Movie
 	string Name;
 	unsigned int DurationMinutes;
 	unsigned int ReleaseYear;
-	string Genre;
+	Genre Genre;
 	float Rating;
 };
 

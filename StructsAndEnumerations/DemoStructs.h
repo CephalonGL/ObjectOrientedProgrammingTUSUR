@@ -13,7 +13,7 @@ void DemoMovie(string Name = "Star Wars: Episode III – "
 			   "Revenge of the Sith",
 			   unsigned int DurationMinutes = 140,
 			   unsigned int ReleaseYear = 2005,
-			   string Genre = "fantasy, action, adventure",
+			   Genre Genre = Action,
 			   float Rating = 8.1f);
 
 void DemoTime(unsigned int Hours = 12,
@@ -65,7 +65,7 @@ Flight* CopyFlight(Flight& flightToCopy);
 Movie* MakeMovie(string Name,
 				 unsigned int DurationMinutes,
 				 unsigned int ReleaseYear,
-				 string Genre,
+				 Genre Genre,
 				 float Rating);
 
 Movie* CopyMovie(Movie& movieToCopy);
@@ -75,3 +75,7 @@ Time* MakeTime(unsigned int Hours,
 			   unsigned int Seconds);
 
 Time* CopyTime(Time& timeToCopy);
+
+void DemoMovieWithGenre();
+
+Movie* CountMoviesByGenre(Movie* movies, int count, Genre findGenre);

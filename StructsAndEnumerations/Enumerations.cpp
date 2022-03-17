@@ -86,5 +86,26 @@ Color ReadColor()
 
 int CountRed(Color* colors, int count)
 {
-	return 0;
+	int countRed = 0;
+	for (int i = 0; i < count; i++)
+	{
+		if (colors[i] == Red)
+		{
+			countRed++;
+		}
+	}
+	return countRed;
+}
+
+int CountColor(Color* colors, int count, Color findedColor)
+{
+	int countColor = 0;
+	for (int i = 0; i < count; i++)
+	{
+		if (colors[i] == findedColor)
+		{
+			countColor++;
+		}
+	}
+	return countColor;
 }

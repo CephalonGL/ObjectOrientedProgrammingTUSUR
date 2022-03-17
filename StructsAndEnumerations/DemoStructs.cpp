@@ -44,7 +44,7 @@ void DemoFlight(string DeparturePoint,
 void DemoMovie(string Name,
 			   unsigned int DurationMinutes,
 			   unsigned int ReleaseYear,
-			   string Genre,
+			   Genre Genre,
 			   float Rating)
 {
 	Movie movie;
@@ -111,7 +111,7 @@ void DemoStructs()
 					Console::ReadUnsignedInt("Enter duration in"
 											 " minutes: "),
 					Console::ReadUnsignedInt("Enter release year: "),
-					Console::ReadString("Enter genre: "),
+					(Genre)Console::ReadInt("Enter genre: "),
 					Console::ReadFloat("Enter rating: "));
 				DemoTime(
 					Console::ReadUnsignedInt("Enter hours: "),
@@ -148,9 +148,9 @@ void DemoStructs()
 	DemoFlight("Tomsk", "Novosibirsk", 50);
 	DemoFlight("Krasnoyarsk", "Novosibirsk", 100);
 
-	DemoMovie("1+1", 112, 2011, "drama, comedy, biography", 8.8f);
-	DemoMovie("Brothers", 105, 2009, "drama, military", 7.1f);
-	DemoMovie("Thor", 115, 2011, "fantasy, action, adventure", 8.8f);
+	DemoMovie("1+1", 112, 2011, Drama, 8.8f);
+	DemoMovie("Brothers", 105, 2009, Drama, 7.1f);
+	DemoMovie("Thor", 115, 2011, Action, 8.8f);
 
 	DemoTime(13, 22, 02);
 	DemoTime(15, 06, 12);
@@ -375,7 +375,7 @@ Flight* CopyFlight(Flight& flightToCopy)
 Movie* MakeMovie(string name, 
 				 unsigned int durationMinutes, 
 				 unsigned int releaseYear, 
-				 string genre, 
+				 Genre genre,
 				 float rating)
 {
 	Movie* newMovie = new Movie;
@@ -416,4 +416,33 @@ Time* CopyTime(Time& timeToCopy)
 	newTime->Minutes = timeToCopy.Minutes;
 	newTime->Seconds = timeToCopy.Seconds;
 	return newTime;
+}
+
+void DemoMovieWithGenre()
+{
+	Movie* movie = MakeMovie("1+1", 112, 2011, Drama, 8.1f);
+	delete movie;
+}
+
+Movie* CountMoviesByGenre(Movie* movies, int count, Genre findGenre)
+{
+	Movie* bestMovie = nullptr;
+	for (int i = 0; i < count; i++)
+	{
+		if (movies[i].Genre == findGenre)
+		{
+			if (bestMovie)
+			{
+				if (movies[i].Rating > bestMovie->Rating)
+				{
+					bestMovie = &movies[i];
+				}
+			}
+			else
+			{
+				bestMovie = &movies[i];
+			}
+		}
+	}
+	return bestMovie;
 }
