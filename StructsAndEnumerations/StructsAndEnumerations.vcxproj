@@ -141,11 +141,13 @@
   <ItemGroup>
     <ClCompile Include="DemoStructs.cpp" />
     <ClCompile Include="DemoExceptions.cpp" />
+    <ClCompile Include="Enumerations.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DemoStructs.h" />
     <ClInclude Include="DemoExceptions.h" />
+    <ClInclude Include="Enumerations.h" />
     <ClInclude Include="Includes.h" />
     <ClInclude Include="Structs.h" />
   </ItemGroup>

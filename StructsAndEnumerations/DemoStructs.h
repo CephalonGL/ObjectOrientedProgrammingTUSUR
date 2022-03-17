@@ -30,10 +30,48 @@ void ReadRectangle(Rectangle& rectangle);
 
 void DemoReadAndWriteRectangles();
 
-void Exchange(Rectangle& rectangle1, Rectangle& rectangle2);
+void Exchange(Rectangle& rectangle1,
+			  Rectangle& rectangle2);
 
-void FindRectangle(Rectangle* rectangles, int count);
+void FindRectangle(Rectangle* rectangles,
+				   int count);
 
 void DemoDynamicFlight();
 
-void FindShortestFlight(Flight* flights, int count);
+void FindShortestFlight(Flight* flights,
+						int count);
+
+void DemoCircle();
+
+Circle* MakeCircle(double x,
+				   double y,
+				   double radius,
+				   string color);
+
+Circle* CopyCircle(Circle& circleToCopy);
+
+Rectangle* Makerectangle(float Length,
+						 float Width,
+						 string Color);
+
+Rectangle* CopyRectangle(Rectangle& rectangleToCopy);
+
+Flight* MakeFlight(string DeparturePoint,
+				   string DestinationPoint,
+				   unsigned int FlightDurationMinutes);
+
+Flight* CopyFlight(Flight& flightToCopy);
+
+Movie* MakeMovie(string Name,
+				 unsigned int DurationMinutes,
+				 unsigned int ReleaseYear,
+				 string Genre,
+				 float Rating);
+
+Movie* CopyMovie(Movie& movieToCopy);
+
+Time* MakeTime(unsigned int Hours,
+			   unsigned int Minutes,
+			   unsigned int Seconds);
+
+Time* CopyTime(Time& timeToCopy);

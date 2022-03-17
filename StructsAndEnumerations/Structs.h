@@ -57,3 +57,11 @@ struct Subject
 	unsigned int LectureDurationHours;
 	unsigned int LaboratoryDurationHours;
 };
+
+struct Circle
+{
+	double X;
+	double Y;
+	double Radius;
+	string Color;
+};

@@ -1,4 +1,6 @@
 #include "DemoStructs.h"
+#include "..\Console\Console.h"
+#include "..\Console\Console.cpp"
 
 void DemoRectangle(float Length,
 				   float Width,
@@ -199,7 +201,8 @@ void DemoReadAndWriteRectangles()
 	}
 }
 
-void Exchange(Rectangle& rectangle1, Rectangle& rectangle2)
+void Exchange(Rectangle& rectangle1,
+			  Rectangle& rectangle2)
 {
 	Rectangle tmp;
 	tmp.Color = rectangle1.Color;
@@ -215,7 +218,8 @@ void Exchange(Rectangle& rectangle1, Rectangle& rectangle2)
 	rectangle2.Width = tmp.Width;
 }
 
-void FindRectangle(Rectangle* rectangles, int count)
+void FindRectangle(Rectangle* rectangles,
+				   int count)
 {
 	Rectangle& maxLengthRectangle = *rectangles;
 	for (int i = 0; i < count; i++)
@@ -271,7 +275,8 @@ void DemoDynamicFlight()
 		delete[] flights;
 }
 
-void FindShortestFlight(Flight* flights, int count)
+void FindShortestFlight(Flight* flights,
+						int count)
 {
 	Flight shortestFlight;
 	shortestFlight.FlightDurationMinutes = 9999999U;
@@ -293,4 +298,122 @@ void FindShortestFlight(Flight* flights, int count)
 		<< shortestFlight.FlightDurationMinutes << endl;
 }
 
+void DemoCircle()
+{
+	Circle* circle1 = MakeCircle(5.0, 7.0, 7.5, "Red");
+	Circle* circle2 = MakeCircle(2.0, 12.0, 12.75, "Green");
+	Circle* circle3 = MakeCircle(-10.0, 10.0, 1.45, "Blue");
 
+	Circle* copiedCircle1 = CopyCircle(*circle1);
+	Circle* copiedCircle2 = CopyCircle(*circle2);
+	Circle* copiedCircle3 = CopyCircle(*circle3);
+}
+
+Circle* MakeCircle(double x,
+				   double y,
+				   double radius,
+				   string color)
+{
+	Circle* circle = new Circle;
+	circle->X = x;
+	circle->Y = y;
+	circle->Radius = radius;
+	circle->Color = color;
+	return circle;
+}
+
+Circle* CopyCircle(Circle& circleToCopy)
+{
+	Circle* newCircle = new Circle;
+	newCircle->X = circleToCopy.X;
+	newCircle->Y = circleToCopy.Y;
+	newCircle->Radius = circleToCopy.Radius;
+	newCircle->Color = circleToCopy.Color;
+	return newCircle;
+}
+
+Rectangle* Makerectangle(float length, 
+						 float width, 
+						 string color)
+{
+	Rectangle* newRectangle = new Rectangle;
+	newRectangle->Length = length;
+	newRectangle->Width = width;
+	newRectangle->Color = color;
+	return newRectangle;
+}
+
+Rectangle* CopyRectangle(Rectangle& rectangleToCopy)
+{
+	Rectangle* newRectangle = new Rectangle;
+	newRectangle->Length = rectangleToCopy.Length;
+	newRectangle->Width = rectangleToCopy.Width;
+	newRectangle->Color = rectangleToCopy.Color;
+	return newRectangle;
+}
+
+Flight* MakeFlight(string departurePoint,
+				   string destinationPoint, 
+				   unsigned int flightDurationMinutes)
+{
+	Flight* newFlight = new Flight;
+	newFlight->DeparturePoint = departurePoint;
+	newFlight->DestinationPoint = destinationPoint;
+	newFlight->FlightDurationMinutes = flightDurationMinutes;
+	return newFlight;
+}
+
+Flight* CopyFlight(Flight& flightToCopy)
+{
+	Flight* newFlight = new Flight;
+	newFlight->DeparturePoint = flightToCopy.DeparturePoint;
+	newFlight->DestinationPoint = flightToCopy.DestinationPoint;
+	newFlight->FlightDurationMinutes = flightToCopy.FlightDurationMinutes;
+	return newFlight;
+}
+
+Movie* MakeMovie(string name, 
+				 unsigned int durationMinutes, 
+				 unsigned int releaseYear, 
+				 string genre, 
+				 float rating)
+{
+	Movie* newMovie = new Movie;
+	newMovie->Name = name;
+	newMovie->DurationMinutes = durationMinutes;
+	newMovie->ReleaseYear = releaseYear;
+	newMovie->Genre = genre;
+	newMovie->Rating = rating;
+	return newMovie;
+}
+
+Movie* CopyMovie(Movie& movieToCopy)
+{
+	Movie* newMovie = new Movie;
+	newMovie->Name = movieToCopy.Name;
+	newMovie->DurationMinutes = movieToCopy.DurationMinutes;
+	newMovie->ReleaseYear = movieToCopy.ReleaseYear;
+	newMovie->Genre = movieToCopy.Genre;
+	newMovie->Rating = movieToCopy.Rating;
+	return newMovie;
+}
+
+Time* MakeTime(unsigned int hours, 
+			   unsigned int minutes, 
+			   unsigned int seconds)
+{
+	Time* newTime = new Time;
+	newTime->Hours = hours;
+	newTime->Minutes = minutes;
+	newTime->Seconds = seconds;
+	return newTime;
+}
+
+Time* CopyTime(Time& timeToCopy)
+{
+	Time* newTime = new Time;
+	newTime->Hours = timeToCopy.Hours;
+	newTime->Minutes = timeToCopy.Minutes;
+	newTime->Seconds = timeToCopy.Seconds;
+	return newTime;
+}
