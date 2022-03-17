@@ -35,3 +35,5 @@ void Exchange(Rectangle& rectangle1, Rectangle& rectangle2);
 void FindRectangle(Rectangle* rectangles, int count);
 
 void DemoDynamicFlight();
+
+void FindShortestFlight(Flight* flights, int count);

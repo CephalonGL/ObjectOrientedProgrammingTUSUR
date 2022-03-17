@@ -97,8 +97,8 @@ void DemoStructs()
 			case Yes:
 			{
 				DemoRectangle(
-					Console::ReadUnsignedInt("Enter length: "),
-					Console::ReadUnsignedInt("Enter width: "),
+					Console::ReadFloat("Enter length: "),
+					Console::ReadFloat("Enter width: "),
 					Console::ReadString("Enter color: "));
 				DemoFlight(
 					Console::ReadString("Enter departure point: "),
@@ -232,5 +232,65 @@ void FindRectangle(Rectangle* rectangles, int count)
 
 void DemoDynamicFlight()
 {
+		const int COUNT_OF_FLIGHTS = 4;
+		Flight* flights = new Flight[COUNT_OF_FLIGHTS];
+		flights[0].DeparturePoint = "Moscow";
+		flights[0].DestinationPoint = "Novosibirsk";
+		flights[0].FlightDurationMinutes = 230;
+		cout << "Deprture point: " << flights[0].DeparturePoint;
+		cout << "\nDestination point: " << flights[0].DestinationPoint;
+		cout << "\nFlight duration, minutes: "
+			<< flights[0].FlightDurationMinutes << endl;
+	
+		flights[1].DeparturePoint = "Tomsk";
+		flights[1].DestinationPoint = "Novosibirsk";
+		flights[1].FlightDurationMinutes = 50;
+		cout << "Deprture point: " << flights[1].DeparturePoint;
+		cout << "\nDestination point: " << flights[1].DestinationPoint;
+		cout << "\nFlight duration, minutes: "
+			<< flights[1].FlightDurationMinutes << endl;
+	
+		flights[2].DeparturePoint = "Krasnoyarsk";
+		flights[2].DestinationPoint = "Novosibirsk";
+		flights[2].FlightDurationMinutes = 100;
+		cout << "Deprture point: " << flights[2].DeparturePoint;
+		cout << "\nDestination point: " << flights[2].DestinationPoint;
+		cout << "\nFlight duration, minutes: "
+			<< flights[2].FlightDurationMinutes << endl;
+	
+		flights[3].DeparturePoint = "Novosibirsk";
+		flights[3].DestinationPoint = "Krasnodar";
+		flights[3].FlightDurationMinutes = 240;
+		cout << "Deprture point: " << flights[3].DeparturePoint;
+		cout << "\nDestination point: " << flights[3].DestinationPoint;
+		cout << "\nFlight duration, minutes: "
+			<< flights[3].FlightDurationMinutes << endl;
 
+		FindShortestFlight(flights, COUNT_OF_FLIGHTS);
+
+		delete[] flights;
 }
+
+void FindShortestFlight(Flight* flights, int count)
+{
+	Flight shortestFlight;
+	shortestFlight.FlightDurationMinutes = 9999999U;
+	for (int i = 0; i < count; i++)
+	{
+		if (flights[i].FlightDurationMinutes 
+			< shortestFlight.FlightDurationMinutes)
+		{
+			shortestFlight.DeparturePoint = flights[i].DeparturePoint;
+			shortestFlight.DestinationPoint = flights[i].DestinationPoint;
+			shortestFlight.FlightDurationMinutes = 
+				flights[i].FlightDurationMinutes;
+		}
+	}
+	cout << "Departure point: " << shortestFlight.DeparturePoint << endl;
+	cout << "Destination point: " 
+		<< shortestFlight.DestinationPoint << endl;
+	cout << "Flight duration, minutes: " 
+		<< shortestFlight.FlightDurationMinutes << endl;
+}
+
+
