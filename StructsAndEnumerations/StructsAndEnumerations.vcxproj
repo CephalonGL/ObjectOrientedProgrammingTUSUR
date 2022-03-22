@@ -145,11 +145,17 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Color.h" />
     <ClInclude Include="DemoStructs.h" />
     <ClInclude Include="DemoExceptions.h" />
     <ClInclude Include="Enumerations.h" />
+    <ClInclude Include="Genre.h" />
     <ClInclude Include="Includes.h" />
+    <ClInclude Include="SmartphoneManufacturer.h" />
     <ClInclude Include="Structs.h" />
+    <ClInclude Include="StudyForm.h" />
+    <ClInclude Include="WeekDay.h" />
+    <ClInclude Include="YearTime.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Console\Console.vcxproj">
