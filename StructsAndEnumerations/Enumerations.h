@@ -1,4 +1,10 @@
 #pragma once
+#include "Color.h"
+#include "WeekDay.h"
+#include "Genre.h"
+#include "StudyForm.h"
+#include "SmartphoneManufacturer.h"
+#include "YearTime.h"
 
 void DemoEnums();
 

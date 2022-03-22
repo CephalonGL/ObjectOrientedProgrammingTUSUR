@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Enumerations">
+      <UniqueIdentifier>{c94d6346-818e-40b7-a4d7-42ea85937179}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -44,23 +47,23 @@
     <ClInclude Include="Enumerations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WeekDay.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Genre.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="SmartphoneManufacturer.h">
+      <Filter>Header Files\Enumerations</Filter>
     </ClInclude>
     <ClInclude Include="StudyForm.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Enumerations</Filter>
     </ClInclude>
-    <ClInclude Include="SmartphoneManufacturer.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="WeekDay.h">
+      <Filter>Header Files\Enumerations</Filter>
     </ClInclude>
     <ClInclude Include="YearTime.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Enumerations</Filter>
+    </ClInclude>
+    <ClInclude Include="Genre.h">
+      <Filter>Header Files\Enumerations</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Header Files\Enumerations</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
