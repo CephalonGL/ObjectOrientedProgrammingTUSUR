@@ -2,23 +2,29 @@
 
 int Console::ReadInt(string message)
 {
-    Print(message);
-    int inputValue;
-    cin >> inputValue;
-    if (cin.fail())
+    while (true)
     {
-        cin.clear();
-        string stringToDelete;
-        cin >> stringToDelete;
-        throw exception("Error: incorrect input data.");
+        WriteLine(message);
+        int inputValue;
+        cin >> inputValue;
+        if (cin.fail())
+        {
+            cin.clear();
+            string stringToDelete;
+            cin >> stringToDelete;
+            WriteLine("Error: incorrect input data.");
+        }
+        else
+        {
+            return inputValue;
+        }
+        WriteLine("\n");
     }
-    Print("\n");
-    return inputValue;
 }
 
 unsigned int Console::ReadUnsignedInt(string message)
 {
-    Print(message);
+    WriteLine(message);
     unsigned int inputValue;
     cin >> inputValue;
     if (cin.fail())
@@ -28,36 +34,42 @@ unsigned int Console::ReadUnsignedInt(string message)
         cin >> stringToDelete;
         throw exception("Error: incorrect input data.");
     }
-    Print("\n");
+    WriteLine("\n");
     return inputValue;
 }
 
 float Console::ReadFloat(string message)
 {
-    Print(message);
-    float inputValue;
-    cin >> inputValue;
-    if (cin.fail())
+    while (true)
     {
-        cin.clear();
-        string stringToDelete;
-        cin >> stringToDelete;
-        throw exception("Error: incorrect input data.");
+        WriteLine(message);
+        float inputValue;
+        cin >> inputValue;
+        if (cin.fail())
+        {
+            cin.clear();
+            string stringToDelete;
+            cin >> stringToDelete;
+            WriteLine("Error: incorrect input data.");
+        }
+        else
+        {
+            return inputValue;
+        }
+        WriteLine("\n");
     }
-    Print("\n");
-    return inputValue;
 }
 
 string Console::ReadString(string message)
 {
-    Print(message);
+    WriteLine(message);
     string inputValue;
     cin >> inputValue;
-    Print("\n");
+    WriteLine("\n");
     return inputValue;
 }
 
-void Console::Print(string message)
+void Console::WriteLine(string message)
 {
     cout << message;
 }
