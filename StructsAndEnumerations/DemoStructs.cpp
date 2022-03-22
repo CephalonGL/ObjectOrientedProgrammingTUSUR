@@ -77,10 +77,10 @@ void DemoTime(unsigned int Hours,
 
 void DemoStructs()
 {
-	Console::Print("Would you insert fields by yourself?\n");
-	Console::Print("1 - yes;\n");
-	Console::Print("0 - no.\n");
-	Console::Print("100 - exit.\n");
+	Console::WriteLine("Would you insert fields by yourself?\n");
+	Console::WriteLine("1 - yes;\n");
+	Console::WriteLine("0 - no.\n");
+	Console::WriteLine("100 - exit.\n");
 	/// <summary>
 	/// Enumeration for user commands.
 	/// </summary>
@@ -134,7 +134,7 @@ void DemoStructs()
 			}
 			default:
 			{
-				Console::Print("Error: unknown command."
+				Console::WriteLine("Error: unknown command."
 							   " Repeat, please.\n");
 				break;
 			}
