@@ -4,4 +4,6 @@
 #include <vector>
 #include <exception>
 
+#include "Book.h"
+
 using namespace std;
