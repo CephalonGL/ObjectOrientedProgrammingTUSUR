@@ -8,16 +8,18 @@ private:
 
 	double _y;
 
+	void SetX(double x);
+
+	void SetY(double y);
+
 public:
+
+	Point();
 
 	Point(double x, double y);
 
 	double GetX();
 
-	void SetX(double x);
-	
 	double GetY();
-	
-	void SetY(double y);
 };
 

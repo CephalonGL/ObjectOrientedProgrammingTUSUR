@@ -7,8 +7,7 @@ Point Rectangle::GetCenter()
 
 void Rectangle::SetCenter(double x, double y)
 {
-	center.SetX(x);
-	center.SetY(y);
+	center = Point(x, y);
 }
 
 double Rectangle::GetLength()
@@ -76,12 +75,18 @@ Point& Rectangle::CalculateAverageCenterValue(vector<Rectangle> rectangles,
 	Point averageCenterValue(0, 0);
 	for (int i = 0; i < rectanglesCount; i++)
 	{
-		averageCenterValue.SetX(averageCenterValue.GetX()
-								+ rectangles[i].GetCenter().GetX());
-		averageCenterValue.SetY(averageCenterValue.GetY()
-								+ rectangles[i].GetCenter().GetY());
+		double newXCenter =
+			averageCenterValue.GetX() + rectangles[i].GetCenter().GetX();
+
+		double newYCenter =
+			averageCenterValue.GetY() + rectangles[i].GetCenter().GetY();
+
+		averageCenterValue = Point(newXCenter, newXCenter);
 	}
-	averageCenterValue.SetX(averageCenterValue.GetX() / rectanglesCount);
-	averageCenterValue.SetY(averageCenterValue.GetY() / rectanglesCount);
+	double xCenter = averageCenterValue.GetX() / rectanglesCount;
+	double yCenter = averageCenterValue.GetY() / rectanglesCount;
+
+	averageCenterValue = Point(xCenter, yCenter);
+
 	return averageCenterValue;
 }

@@ -21,9 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8fed2f86-87e6-454d-ad9b-401ab11fe581}</ProjectGuid>
-    <RootNamespace>ClassesAndIncapsulation</RootNamespace>
+    <ProjectGuid>{fa525fa5-be4f-478d-8d18-e44170241701}</ProjectGuid>
+    <RootNamespace>StructsAndEnumerations</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>LAB2_StructsAndEnumerations</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -139,29 +140,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Album.cpp" />
-    <ClCompile Include="Band.cpp" />
-    <ClCompile Include="Book.cpp" />
-    <ClCompile Include="Flight.cpp" />
+    <ClCompile Include="DemoStructs.cpp" />
+    <ClCompile Include="DemoExceptions.cpp" />
+    <ClCompile Include="Enumerations.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Point.cpp" />
-    <ClCompile Include="Rectangle.cpp" />
-    <ClCompile Include="Route.cpp" />
-    <ClCompile Include="Song.cpp" />
-    <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Album.h" />
-    <ClInclude Include="Band.h" />
-    <ClInclude Include="Book.h" />
-    <ClInclude Include="Flight.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="DemoStructs.h" />
+    <ClInclude Include="DemoExceptions.h" />
+    <ClInclude Include="Enumerations.h" />
     <ClInclude Include="Genre.h" />
     <ClInclude Include="Includes.h" />
-    <ClInclude Include="Point.h" />
-    <ClInclude Include="Rectangle.h" />
-    <ClInclude Include="Route.h" />
-    <ClInclude Include="Song.h" />
-    <ClInclude Include="Time.h" />
+    <ClInclude Include="SmartphoneManufacturer.h" />
+    <ClInclude Include="Structs.h" />
+    <ClInclude Include="StudyForm.h" />
+    <ClInclude Include="WeekDay.h" />
+    <ClInclude Include="YearTime.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Console\Console.vcxproj">
