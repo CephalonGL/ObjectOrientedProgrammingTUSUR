@@ -4,30 +4,32 @@
 #include <iostream>
 using namespace std;
 
-namespace Console
+static class Console
 {
 	/// <summary>
 	/// Print message if got, then read
 	/// value from console and check if it is int.
 	/// </summary>
-	/// <param name="message">Message to print before reading</param>
+	/// <param name="message">Message to print 
+	/// before reading</param>
 	/// <returns>Int input value from console</returns>
-	int ReadInt(string message = "");
+	static int ReadInt(string message = "");
 
-	unsigned int ReadUnsignedInt(string message = "");
+	static unsigned int ReadUnsignedInt(string message = "");
 
-	float ReadFloat(string message = "");
+	static float ReadFloat(string message = "");
 
 	/// <summary>
 	/// Read value from console
 	/// </summary>
-	/// <param name="message">Message to print before reading</param>
+	/// <param name="message">Message to print 
+	/// before reading</param>
 	/// <returns>Input string</returns>
-	string ReadString(string message = "");
+	static string ReadString(string message = "");
 
 	/// <summary>
 	/// Print message to console
 	/// </summary>
 	/// <param name="message">Message to print</param>
-	void WriteLine(string message);
+	static void WriteLine(string message);
 };
