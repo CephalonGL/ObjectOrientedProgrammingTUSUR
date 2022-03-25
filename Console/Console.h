@@ -13,11 +13,11 @@ static class Console
 	/// <param name="message">Message to print 
 	/// before reading</param>
 	/// <returns>Int input value from console</returns>
-	static int& ReadInt(const string& message = "");
+	static int ReadInt(const string& message = "");
 
-	static unsigned int& ReadUnsignedInt(const string& message = "");
+	static unsigned int ReadUnsignedInt(const string& message = "");
 
-	static float& ReadFloat(const string& message = "");
+	static float ReadFloat(const string& message = "");
 
 	/// <summary>
 	/// Read value from console
@@ -25,7 +25,7 @@ static class Console
 	/// <param name="message">Message to print 
 	/// before reading</param>
 	/// <returns>Input string</returns>
-	static string& ReadString(const string& message = "");
+	static string ReadString(const string& message = "");
 
 	/// <summary>
 	/// Print message to console

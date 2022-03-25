@@ -1,6 +1,6 @@
 #include "Console.h"
 
-int& Console::ReadInt(const string& message)
+int Console::ReadInt(const string& message)
 {
     while (true)
     {
@@ -22,7 +22,7 @@ int& Console::ReadInt(const string& message)
     }
 }
 
-unsigned int& Console::ReadUnsignedInt(const string& message)
+unsigned int Console::ReadUnsignedInt(const string& message)
 {
     WriteLine(message);
     unsigned int inputValue;
@@ -38,7 +38,7 @@ unsigned int& Console::ReadUnsignedInt(const string& message)
     return inputValue;
 }
 
-float& Console::ReadFloat(const string& message)
+float Console::ReadFloat(const string& message)
 {
     while (true)
     {
@@ -60,7 +60,7 @@ float& Console::ReadFloat(const string& message)
     }
 }
 
-string& Console::ReadString(const string& message)
+string Console::ReadString(const string& message)
 {
     WriteLine(message);
     string inputValue;
