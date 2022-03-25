@@ -6,6 +6,7 @@ using namespace std;
 
 static class Console
 {
+public:
 	/// <summary>
 	/// Print message if got, then read
 	/// value from console and check if it is int.
