@@ -1,4 +1,4 @@
-#include "Flight.h"
+#include "..\stdafx.h"
 
 Flight::Flight()
 {

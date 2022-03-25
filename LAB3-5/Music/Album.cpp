@@ -1,4 +1,4 @@
-#include "Album.h"
+#include "..\stdafx.h"
 
 Album::Album()
 {

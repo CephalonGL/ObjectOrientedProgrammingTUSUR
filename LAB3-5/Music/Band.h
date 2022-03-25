@@ -1,5 +1,4 @@
 #pragma once
-#include "Album.h"
 
 class Band
 {

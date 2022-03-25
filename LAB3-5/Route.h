@@ -1,7 +1,4 @@
 #pragma once
-#include "Includes.h"
-#include <vector>
-#include <string>	
 
 using namespace std;
 

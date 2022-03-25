@@ -1,4 +1,4 @@
-#include "Book.h"
+#include "stdafx.h"
 
 void DemoBook()
 {
@@ -13,19 +13,19 @@ void DemoBook()
 		WriteBookToConsole(books[i]);
 	}
 	FindBookByAuthor(books, booksCount,
-					 ReadString("Enter author to find: "));
+					 Console::ReadString("Enter author to find: "));       
 }
 
 void ReadBookFromConsole(Book& book)
 {
-	WriteLine("Enter book info:\n");
-	book.Name = ReadString("Enter name: ");
+	Console::WriteLine("Enter book info:\n");
+	book.Name = Console::ReadString("Enter name: ");
 	book.ReleaseYear = ReadReleaseYear();
 	book.PageCount = ReadPageCount();
 	book.AuthorCount = ReadAuthorCount();
 	for (int i = 0; i < book.AuthorCount; i++)
 	{
-		book.Authors[0] = ReadString("Enter author: ");
+		book.Authors[0] = Console::ReadString("Enter author: ");
 	}
 }
 
@@ -73,7 +73,7 @@ int ReadReleaseYear()
 	while (true)
 	{
 		const int CURRENT_YEAR = 2022;
-		int releaseYear = ReadInt("Enter release year: ");
+		int releaseYear = Console::ReadInt("Enter release year: ");
 		if (releaseYear > 0
 			&& releaseYear < CURRENT_YEAR)
 		{
@@ -81,7 +81,7 @@ int ReadReleaseYear()
 		}
 		else
 		{
-			WriteLine("Incorrect release year. Repeat, please.\n");
+			Console::WriteLine("Incorrect release year. Repeat, please.\n");
 		}
 	}
 }
@@ -90,14 +90,14 @@ int ReadPageCount()
 {
 	while (true)
 	{
-		int pageCount = ReadInt("Enter page count: ");
+		int pageCount = Console::ReadInt("Enter page count: ");
 		if (pageCount > 0)
 		{
 			return pageCount;
 		}
 		else
 		{
-			WriteLine("Incorrect page count. Repeat, please.\n");
+			Console::WriteLine("Incorrect page count. Repeat, please.\n");
 		}
 	}
 }
@@ -106,7 +106,7 @@ int ReadAuthorCount()
 {
 	while (true)
 	{
-		int authorCount = ReadInt("Enter authors count: ");
+		int authorCount = Console::ReadInt("Enter authors count: ");
 		if (authorCount <= 10
 			&& authorCount >= 1)
 		{
@@ -114,7 +114,7 @@ int ReadAuthorCount()
 		}
 		else
 		{
-			WriteLine("Incorrect authors count. Repeat, please.\n");
+			Console::WriteLine("Incorrect authors count. Repeat, please.\n");
 		}
 	}
 }
@@ -123,7 +123,7 @@ int ReadBookCount()
 {
 	while (true)
 	{
-		int bookCount = ReadInt("Enter count of books");
+		int bookCount = Console::ReadInt("Enter count of books");
 		if (bookCount >= 1
 			&& bookCount <= 6)
 		{
@@ -131,7 +131,7 @@ int ReadBookCount()
 		}
 		else
 		{
-			WriteLine("Incorrect count of books. Repeat, please.\n");
+			Console::WriteLine("Incorrect count of books. Repeat, please.\n");
 		}
 	}
 }

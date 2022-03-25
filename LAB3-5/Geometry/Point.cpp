@@ -1,4 +1,4 @@
-#include "Point.h"
+#include "..\stdafx.h"
 
 Point::Point()
 {

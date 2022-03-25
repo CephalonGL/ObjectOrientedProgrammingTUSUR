@@ -1,11 +1,4 @@
 #pragma once
-#include "Includes.h"
-//BUG: Подключение консоли пришлось вынести из Includes.h,
-//потому что иначе компилятор их не видит. 
-#include "..\Console\Console.h"
-#include "..\Console\Console.cpp"
-
-using namespace Console;
 
 struct Book
 {

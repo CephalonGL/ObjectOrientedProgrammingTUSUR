@@ -1,4 +1,4 @@
-#include "Band.h"
+#include "..\stdafx.h"
 
 Band::Band()
 {

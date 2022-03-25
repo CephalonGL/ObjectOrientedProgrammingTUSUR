@@ -1,4 +1,4 @@
-#include "Rectangle.h"
+#include "..\stdafx.h"
 
 Point Rectangle::GetCenter()
 {

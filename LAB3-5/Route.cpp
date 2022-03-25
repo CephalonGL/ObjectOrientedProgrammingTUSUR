@@ -1,4 +1,4 @@
-#include "Route.h"
+#include "stdafx.h"
 
 void DemoRoute()
 {
@@ -12,20 +12,20 @@ void DemoRoute()
 	{
 		WriteRouteToConsole(routes[i]);
 	}
-	FindRouteTo(routes, ReadString("Enter author to find: "),
+	FindRouteTo(routes, Console::ReadString("Enter author to find: "),
 				routesCount);
 }
 
 void ReadRouteFromConsole(Route& route)
 {
-	WriteLine("Enter route info:\n");
+	Console::WriteLine("Enter route info:\n");
 	route.Number = ReadRouteNumber();
 	route.DurationInMinutes = ReadRouteDurationMinutes();
 	route.BusRouteIntervalInMinutes = ReadBusRouteIntervalInMinutes();
 	route.StopsCount = ReadStopsCount();
 	for (int i = 0; i < route.StopsCount; i++)
 	{
-		route.stops[i] = ReadString("Enter stop name: ");
+		route.stops[i] = Console::ReadString("Enter stop name: ");
 		cout << endl;
 	}
 }
@@ -73,7 +73,7 @@ int ReadRoutesCount()
 {
 	while (true)
 	{
-		int routesCount = ReadInt("Enter routes count: ");
+		int routesCount = Console::ReadInt("Enter routes count: ");
 		if (routesCount >= 3
 			&& routesCount <= 5)
 		{
@@ -81,7 +81,7 @@ int ReadRoutesCount()
 		}
 		else
 		{
-			WriteLine("Incorrect routes count. Repeat, please.\n");
+			Console::WriteLine("Incorrect routes count. Repeat, please.\n");
 		}
 	}
 }
@@ -90,14 +90,14 @@ int ReadRouteNumber()
 {
 	while (true)
 	{
-		int routeNumbet = ReadInt("Enter route number: ");
+		int routeNumbet = Console::ReadInt("Enter route number: ");
 		if (routeNumbet > 0)
 		{
 			return routeNumbet;
 		}
 		else
 		{
-			WriteLine("Incorrect route number. Repeat, please.\n");
+			Console::WriteLine("Incorrect route number. Repeat, please.\n");
 		}
 	}
 }
@@ -107,14 +107,14 @@ int ReadRouteDurationMinutes()
 	while (true)
 	{
 		int routeDurationMinutes =
-			ReadInt("Enter route duration in minutes: ");
+			Console::ReadInt("Enter route duration in minutes: ");
 		if (routeDurationMinutes > 0)
 		{
 			return routeDurationMinutes;
 		}
 		else
 		{
-			WriteLine("Incorrect duration. Repeat, please.\n");
+			Console::WriteLine("Incorrect duration. Repeat, please.\n");
 		}
 	}
 }
@@ -124,14 +124,14 @@ int ReadBusRouteIntervalInMinutes()
 	while (true)
 	{
 		int busRouteIntervalInMinutes =
-			ReadInt("Enter bus route interval in minutes: ");
+			Console::ReadInt("Enter bus route interval in minutes: ");
 		if (busRouteIntervalInMinutes > 0)
 		{
 			return busRouteIntervalInMinutes;
 		}
 		else
 		{
-			WriteLine("Incorrect interval. Repeat, please.\n");
+			Console::WriteLine("Incorrect interval. Repeat, please.\n");
 		}
 	}
 }
@@ -141,14 +141,14 @@ int ReadStopsCount()
 	while (true)
 	{
 		int stopsCount =
-			ReadInt("Enter stops count: ");
+			Console::ReadInt("Enter stops count: ");
 		if (stopsCount > 0)
 		{
 			return stopsCount;
 		}
 		else
 		{
-			WriteLine("Incorrect count. Repeat, please.\n");
+			Console::WriteLine("Incorrect count. Repeat, please.\n");
 		}
 	}
 }

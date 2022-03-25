@@ -1,4 +1,4 @@
-#include "Time.h"
+#include "..\stdafx.h"
 
 Time::Time()
 {

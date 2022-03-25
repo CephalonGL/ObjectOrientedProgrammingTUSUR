@@ -1,6 +1,4 @@
 #pragma once
-#include "Includes.h"
-#include "Genre.h"
 
 class Song
 {

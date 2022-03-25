@@ -1,4 +1,4 @@
-#include "Song.h"
+#include "..\stdafx.h"
 
 Song::Song()
 {

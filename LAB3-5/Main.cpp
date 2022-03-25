@@ -1,9 +1,4 @@
-#include "includes.h"
-#include "Flight.h"
-#include "Song.h"
-#include "Band.h"
-#include "..\Console\Console.h"
-#include "..\Console\Console.cpp"
+#include "stdafx.h"
 
 int main()
 {

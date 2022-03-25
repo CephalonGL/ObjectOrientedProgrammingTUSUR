@@ -1,8 +1,4 @@
 #pragma once
-#include <iostream>
-#include <exception>
-#include <vector>
-#include"..\ClassesAndIncapsulation\Point.h"
 
 using namespace std;
 

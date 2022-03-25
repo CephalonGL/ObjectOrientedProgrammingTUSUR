@@ -1,4 +1,9 @@
-#include "Ring.h"
+#include "..\stdafx.h"
+
+bool Ring::AssertOnPositiveValue()
+{
+	return false;
+}
 
 Ring::Ring()
 {

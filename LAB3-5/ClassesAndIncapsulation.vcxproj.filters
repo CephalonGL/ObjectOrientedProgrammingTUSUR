@@ -33,76 +33,79 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Album.cpp">
-      <Filter>Source Files\Music</Filter>
-    </ClCompile>
-    <ClCompile Include="Band.cpp">
-      <Filter>Source Files\Music</Filter>
-    </ClCompile>
-    <ClCompile Include="Song.cpp">
-      <Filter>Source Files\Music</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>Source Files\Geometry</Filter>
-    </ClCompile>
-    <ClCompile Include="Rectangle.cpp">
-      <Filter>Source Files\Geometry</Filter>
-    </ClCompile>
-    <ClCompile Include="Flight.cpp">
-      <Filter>Source Files\Airport</Filter>
-    </ClCompile>
-    <ClCompile Include="Time.cpp">
-      <Filter>Source Files\Airport</Filter>
-    </ClCompile>
-    <ClCompile Include="..\LAB4_ClassUsage\Ring.cpp">
-      <Filter>Source Files\Geometry</Filter>
-    </ClCompile>
-    <ClCompile Include="Route.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Book.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Includes.h">
+    <ClInclude Include="Book.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Album.h">
-      <Filter>Header Files\Music</Filter>
-    </ClInclude>
-    <ClInclude Include="Band.h">
-      <Filter>Header Files\Music</Filter>
-    </ClInclude>
-    <ClInclude Include="Song.h">
-      <Filter>Header Files\Music</Filter>
-    </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>Header Files\Geometry</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
-      <Filter>Header Files\Geometry</Filter>
-    </ClInclude>
-    <ClInclude Include="Flight.h">
-      <Filter>Header Files\Airport</Filter>
-    </ClInclude>
-    <ClInclude Include="Time.h">
-      <Filter>Header Files\Airport</Filter>
-    </ClInclude>
-    <ClInclude Include="..\LAB4_ClassUsage\Ring.h">
-      <Filter>Header Files\Geometry</Filter>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Route.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Book.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Genre.h">
+    <ClInclude Include="Music\Album.h">
       <Filter>Header Files\Music</Filter>
     </ClInclude>
+    <ClInclude Include="Music\Band.h">
+      <Filter>Header Files\Music</Filter>
+    </ClInclude>
+    <ClInclude Include="Music\Genre.h">
+      <Filter>Header Files\Music</Filter>
+    </ClInclude>
+    <ClInclude Include="Music\Song.h">
+      <Filter>Header Files\Music</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Point.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Rectangle.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Ring.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Airport\Flight.h">
+      <Filter>Header Files\Airport</Filter>
+    </ClInclude>
+    <ClInclude Include="Airport\Time.h">
+      <Filter>Header Files\Airport</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Book.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Route.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Airport\Flight.cpp">
+      <Filter>Source Files\Airport</Filter>
+    </ClCompile>
+    <ClCompile Include="Airport\Time.cpp">
+      <Filter>Source Files\Airport</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Point.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Rectangle.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Ring.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Music\Album.cpp">
+      <Filter>Source Files\Music</Filter>
+    </ClCompile>
+    <ClCompile Include="Music\Band.cpp">
+      <Filter>Source Files\Music</Filter>
+    </ClCompile>
+    <ClCompile Include="Music\Song.cpp">
+      <Filter>Source Files\Music</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
