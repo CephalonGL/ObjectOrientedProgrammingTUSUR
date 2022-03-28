@@ -2,6 +2,7 @@
 #include <string>
 #include <exception>
 #include <iostream>
+#include <ctype.h>
 using namespace std;
 
 static class Console

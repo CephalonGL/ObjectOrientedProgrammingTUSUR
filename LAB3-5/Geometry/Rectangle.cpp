@@ -1,13 +1,25 @@
 #include "..\stdafx.h"
 
-Point Rectangle::GetCenter()
+Rectangle::Rectangle(double length, double width, Point center)
 {
-	return center;
+	SetLength(length);
+	SetWidth(width);
+	SetCenter(center);
+}
+
+Point& Rectangle::GetCenter()
+{
+	return _center;
 }
 
 void Rectangle::SetCenter(double x, double y)
 {
-	center = Point(x, y);
+	_center = Point(x, y);
+}
+
+void Rectangle::SetCenter(Point center)
+{
+	_center = center;
 }
 
 double Rectangle::GetLength()
@@ -17,11 +29,14 @@ double Rectangle::GetLength()
 
 void Rectangle::SetLength(double length)
 {
-	if (length < 0)
+	if (Validator::IsValuePositive(length))
+	{
+		_length = length;
+	}
+	else
 	{
 		throw exception("Error: length < 0.");
 	}
-	this->_length = length;
 }
 
 double Rectangle::GetWidth()
@@ -31,42 +46,14 @@ double Rectangle::GetWidth()
 
 void Rectangle::SetWidth(double width)
 {
-	if (width < 0)
+	if (Validator::IsValuePositive(width))
+	{
+		_width = width;
+	}
+	else
 	{
 		throw exception("Error: width < 0.");
 	}
-	this->_width = width;
-}
-
-void Rectangle::DemoRectangleWithPoint()
-{
-	vector<Rectangle> rectangles;
-	const int RECTANGLES_COUNT = 3;
-
-	rectangles[0].SetCenter(5.2, 3.4);
-	rectangles[0].SetLength(10);
-	rectangles[0].SetWidth(5.5);
-
-	rectangles[1].SetCenter(6.1, 2.8);
-	rectangles[1].SetLength(4.4);
-	rectangles[1].SetWidth(5.9);
-
-	rectangles[2].SetCenter(12.5, 10.3);
-	rectangles[2].SetLength(5);
-	rectangles[2].SetWidth(5);
-
-	for (int i = 0; i < RECTANGLES_COUNT; i++)
-	{
-		cout << "Rectangle " << i << ":" << endl;
-		cout << "X = " << rectangles[i].GetCenter().GetX() << "; "
-			<< "Y = " << rectangles[i].GetCenter().GetY() << "; "
-			<< "Length = " << rectangles[i].GetLength() << "; "
-			<< "Width = " << rectangles[i].GetWidth()  << "; " << endl;
-	}
-	Point averageCenterValue =
-		CalculateAverageCenterValue(rectangles, RECTANGLES_COUNT);
-	cout << "Xcenter = " << averageCenterValue.GetX() << "; "
-		<< "Ycenter = " << averageCenterValue.GetY() << endl;
 }
 
 Point& Rectangle::CalculateAverageCenterValue(vector<Rectangle> rectangles,

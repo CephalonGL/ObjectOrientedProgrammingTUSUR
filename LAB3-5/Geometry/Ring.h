@@ -12,27 +12,33 @@ private:
 
 	Point _center;
 
-	bool AssertOnPositiveValue();
+	static int _allRingsCount;
 
-private:
+	bool AssertOnPositiveValue(const double& value);
 
-	Ring();
+public:
+
 	Ring(double innerRadius,
 		 double outerRadius,
 		 Point center);
 
+	~Ring();
+
 	double GetInnerRadius();
-	void SetInnerRadius(double innerRadius);
+	void SetInnerRadius(const double& innerRadius);
 
 	double GetOuterRadius();
-	void SetOuterRadius(double outerRadius);
+	void SetOuterRadius(const double& outerRadius);
 
-	Point GetCenter();
-	void SetCenter(Point center);
+	Point& GetCenter();
+	void SetCenter(const Point& center);
 
 	double GetArea();
 
-	static void DemoRing();
+	static Ring MakeRing(double innerRadius,
+						 double outerRadius,
+						 Point center);
 
+	static int GetAllRingsCount();
 };
 

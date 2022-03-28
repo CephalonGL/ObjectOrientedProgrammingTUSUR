@@ -1,12 +1,18 @@
 #include "..\stdafx.h"
 
-bool Ring::AssertOnPositiveValue()
-{
-	return false;
-}
+int Ring::_allRingsCount = 0;
 
-Ring::Ring()
+bool Ring::AssertOnPositiveValue(const double& value)
 {
+
+	if (Validator::IsValuePositive(value))
+	{
+		return value;
+	}
+	else
+	{
+		throw exception("Error: value < 0");
+	}
 }
 
 Ring::Ring(double innerRadius,
@@ -15,7 +21,8 @@ Ring::Ring(double innerRadius,
 {
 	SetInnerRadius(innerRadius);
 	SetOuterRadius(outerRadius);
-	SetCenter(center);
+	SetCenter(Point(center.GetX(), center.GetY()));
+	_allRingsCount++;
 }
 
 double Ring::GetInnerRadius()
@@ -23,16 +30,14 @@ double Ring::GetInnerRadius()
 	return _innerRadius;
 }
 
-void Ring::SetInnerRadius(double innerRadius)
+Ring::~Ring()
 {
-	if (innerRadius < 0)
-	{
-		throw exception("Error: inner radius is out of range.");
-	}
-	else
-	{
-		_innerRadius = innerRadius;
-	}
+	_allRingsCount--;
+}
+
+void Ring::SetInnerRadius(const double& innerRadius)
+{
+	_innerRadius = AssertOnPositiveValue(innerRadius);
 }
 
 double Ring::GetOuterRadius()
@@ -40,32 +45,28 @@ double Ring::GetOuterRadius()
 	return _outerRadius;
 }
 
-void Ring::SetOuterRadius(double outerRadius)
+void Ring::SetOuterRadius(const double& outerRadius)
 {
 	if (GetInnerRadius() == -1)
 	{
 		throw exception("Error: set inner radius at first.");
 	}
-	if (outerRadius < 0)
-	{
-		throw exception("Error: outer radius is out of range.");
-	}
-	if (outerRadius <= GetInnerRadius())
+	else if (outerRadius <= GetInnerRadius())
 	{
 		throw exception("Error: outer radius must be more than inner.");
 	}
 	else
 	{
-		_outerRadius = outerRadius;
+		_outerRadius = AssertOnPositiveValue(outerRadius);
 	}
 }
 
-Point Ring::GetCenter()
+Point& Ring::GetCenter()
 {
 	return _center;
 }
 
-void Ring::SetCenter(Point center)
+void Ring::SetCenter(const Point& center)
 {
 	_center = center;
 }
@@ -76,47 +77,21 @@ double Ring::GetArea()
 	return PI * pow((GetOuterRadius() - GetInnerRadius()), 2.0);
 }
 
-void Ring::DemoRing()
+Ring Ring::MakeRing(double innerRadius, 
+					double outerRadius, 
+					Point center)
 {
-	vector<Ring> rings;
-	//TODO: make simple
 	try
 	{
-		rings[0] = Ring(3.0, 4.5, Point(1.0, 4.0));
+		return Ring(2.0, 2.1, Point(2.2, 1.0));
 	}
-	catch (const std::exception& error)
+	catch (const exception& error)
 	{
 		cout << error.what();
 	}
-	try
-	{
-		rings[1] = Ring(4.0, 4.5, Point(0.0, 0.0));
-	}
-	catch (const std::exception& error)
-	{
-		cout << error.what();
-	}
-	try
-	{
-		rings[2] = Ring(2.0, 2.1, Point(2.2, 1.0));
-	}
-	catch (const std::exception& error)
-	{
-		cout << error.what();
-	}
-	try
-	{
-		rings[3] = Ring(10.0, 4.5, Point(1.0, 1.0));
-	}
-	catch (const std::exception& error)
-	{
-		cout << error.what();
-	}
+}
 
-	for (int i = 0; i < rings.size(); i++)
-	{
-		rings[i].GetArea();
-	}
-
-
+int Ring::GetAllRingsCount()
+{
+	return _allRingsCount;
 }

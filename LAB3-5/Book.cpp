@@ -81,7 +81,8 @@ int ReadReleaseYear()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect release year. Repeat, please.\n");
+			Console::WriteLine("Incorrect release year."
+							   " Repeat, please.\n");
 		}
 	}
 }
@@ -114,7 +115,8 @@ int ReadAuthorCount()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect authors count. Repeat, please.\n");
+			Console::WriteLine("Incorrect authors count."
+							   " Repeat, please.\n");
 		}
 	}
 }
@@ -123,7 +125,7 @@ int ReadBookCount()
 {
 	while (true)
 	{
-		int bookCount = Console::ReadInt("Enter count of books");
+		int bookCount = Console::ReadInt("Enter count of books: ");
 		if (bookCount >= 1
 			&& bookCount <= 6)
 		{
@@ -131,7 +133,8 @@ int ReadBookCount()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect count of books. Repeat, please.\n");
+			Console::WriteLine("Incorrect count of books."
+							   " Repeat, please.\n");
 		}
 	}
 }

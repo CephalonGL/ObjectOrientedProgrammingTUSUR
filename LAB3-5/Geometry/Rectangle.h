@@ -4,17 +4,22 @@ class Rectangle
 {
 private:
 
-	Point center;
+	Point _center;
 
 	double _length;
 
 	double _width;
 
 public:
+	Rectangle(double length,
+			  double width,
+			  Point center);
 
-	Point GetCenter();
+	Point& GetCenter();
 
 	void SetCenter(double x, double y);
+
+	void SetCenter(Point center);
 
 	double GetLength();
 
@@ -24,9 +29,8 @@ public:
 
 	void SetWidth(double width);
 
-	void DemoRectangleWithPoint();
 
-	Point& CalculateAverageCenterValue(vector<Rectangle> rectangles,
-									   int rectanglesCount);
+	static Point& CalculateAverageCenterValue(vector<Rectangle> rectangles,
+											 int rectanglesCount);
 };
 

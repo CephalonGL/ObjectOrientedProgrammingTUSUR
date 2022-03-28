@@ -14,9 +14,8 @@ private:
 
 public:
 
-	Point();
-
-	Point(double x, double y);
+	Point(double x = 0.0, 
+		  double y = 0.0);
 
 	double GetX();
 

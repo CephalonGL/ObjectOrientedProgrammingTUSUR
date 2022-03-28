@@ -19,8 +19,6 @@ int FindBookByAuthor(vector<Book>& books,
 					 int booksCount,
 					 string author);
 
-
-
 int ReadReleaseYear();
 
 int ReadPageCount();

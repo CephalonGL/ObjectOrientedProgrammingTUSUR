@@ -9,6 +9,8 @@
 
 using namespace std;
 
+#include "Validator.h"
+
 #include "Book.h"
 #include "Route.h"
 #include "Airport/Time.h"
@@ -20,3 +22,6 @@ using namespace std;
 #include "Music/Song.h"
 #include "Music/Album.h"
 #include "Music/Band.h"
+
+#include "CollisionManager.h"
+#include "GeometricProgram.h"

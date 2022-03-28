@@ -1,10 +1,7 @@
 #include "..\stdafx.h"
 
-Point::Point()
-{
-}
-
-Point::Point(double x, double y)
+Point::Point(double x, 
+			 double y)
 {
 	SetX(x);
 	SetY(y);
@@ -17,7 +14,7 @@ double Point::GetX()
 
 void Point::SetX(double x)
 {
-	this->_x = x;
+	_x = x;
 }
 
 double Point::GetY()
@@ -27,6 +24,6 @@ double Point::GetY()
 
 void Point::SetY(double y)
 {
-	this->_y = y;
+	_y = y;
 }
 

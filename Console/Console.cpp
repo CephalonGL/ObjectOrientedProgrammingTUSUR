@@ -2,9 +2,10 @@
 
 int Console::ReadInt(const string& message)
 {
+    //static cast, dinamic cast, isalpha, isdigit
+    WriteLine(message);
     while (true)
     {
-        WriteLine(message);
         int inputValue;
         cin >> inputValue;
         if (cin.fail())
