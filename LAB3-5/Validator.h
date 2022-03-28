@@ -6,16 +6,16 @@ private:
 
 
 public:
-	static bool IsValuePositive(const double& value);
+	static bool IsValuePositive(double value);
 	
-	static bool IsValueInRange(const double& value,
-							   const double& min,
-							   const double& max);
+	static bool IsValueInRange(double value,
+							   double min,
+							   double max);
 	
-	static void AssertPositiveValue(const double& value);
+	static void AssertPositiveValue(double value);
 	
-	static void AssertValueInRange(const double& value,
-								   const double& min,
-								   const double& max);
+	static void AssertValueInRange(double value,
+								   double min,
+								   double max);
 };
 

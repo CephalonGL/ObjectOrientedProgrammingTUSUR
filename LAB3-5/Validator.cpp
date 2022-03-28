@@ -1,17 +1,19 @@
 #include "stdafx.h"
 
-bool Validator::IsValuePositive(const double& value)
+bool Validator::IsValuePositive(double value)
 {
 	return value > 0;
 }
 
-bool Validator::IsValueInRange(const double& value, const double& min, const double& max)
+bool Validator::IsValueInRange(double value, 
+							   double min, 
+							   double max)
 {
 	return value >= min
 			&& value <= max;
 }
 
-void Validator::AssertPositiveValue(const double& value)
+void Validator::AssertPositiveValue(double value)
 {
 	if (!IsValuePositive(value))
 	{
@@ -19,9 +21,9 @@ void Validator::AssertPositiveValue(const double& value)
 	}
 }
 
-void Validator::AssertValueInRange(const double& value, 
-								   const double& min, 
-								   const double& max)
+void Validator::AssertValueInRange(double value, 
+								   double min, 
+								   double max)
 {
 	if (!IsValueInRange(value, min, max))
 	{
