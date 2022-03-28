@@ -2,7 +2,7 @@
 
 int Ring::_allRingsCount = 0;
 
-bool Ring::AssertOnPositiveValue(const double& value)
+double Ring::AssertOnPositiveValue(double value)
 {
 
 	if (Validator::IsValuePositive(value))

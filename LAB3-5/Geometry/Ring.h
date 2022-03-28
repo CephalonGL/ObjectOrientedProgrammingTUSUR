@@ -14,7 +14,7 @@ private:
 
 	static int _allRingsCount;
 
-	bool AssertOnPositiveValue(const double& value);
+	double AssertOnPositiveValue(double value);
 
 public:
 
