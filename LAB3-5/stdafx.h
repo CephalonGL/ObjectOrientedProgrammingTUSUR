@@ -23,5 +23,5 @@ using namespace std;
 #include "Music/Album.h"
 #include "Music/Band.h"
 
-#include "CollisionManager.h"
-#include "GeometricProgram.h"
+#include "Geometry/CollisionManager.h"
+#include "Geometry/GeometricProgram.h"

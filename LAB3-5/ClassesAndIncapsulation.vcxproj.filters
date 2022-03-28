@@ -72,11 +72,11 @@
     <ClInclude Include="Validator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CollisionManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Geometry\CollisionManager.h">
+      <Filter>Header Files\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="GeometricProgram.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Geometry\GeometricProgram.h">
+      <Filter>Header Files\Geometry</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -119,11 +119,11 @@
     <ClCompile Include="Validator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CollisionManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Geometry\CollisionManager.cpp">
+      <Filter>Source Files\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="GeometricProgram.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Geometry\GeometricProgram.cpp">
+      <Filter>Source Files\Geometry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 
 double CollisionManager::GetDeltaX(Point& first,
 								   Point& second)
