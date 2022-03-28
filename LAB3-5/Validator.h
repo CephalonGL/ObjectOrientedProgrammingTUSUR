@@ -17,7 +17,5 @@ public:
 	static void AssertValueInRange(const double& value,
 								   const double& min,
 								   const double& max);
-
-
 };
 
