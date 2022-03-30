@@ -157,12 +157,17 @@
     <ClInclude Include="Geometry\Point.h" />
     <ClInclude Include="Geometry\Rectangle.h" />
     <ClInclude Include="Geometry\Ring.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="ShowPerson.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Music\Album.h" />
     <ClInclude Include="Music\Band.h" />
     <ClInclude Include="Music\Genre.h" />
     <ClInclude Include="Music\Song.h" />
     <ClInclude Include="Route.h" />
+    <ClInclude Include="Student.h" />
+    <ClInclude Include="Teacher.h" />
+    <ClInclude Include="TeacherPost.h" />
     <ClInclude Include="Validator.h" />
   </ItemGroup>
   <ItemGroup>
@@ -270,18 +275,22 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
+    <ClCompile Include="Person.cpp" />
     <ClCompile Include="Route.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ShowPerson.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Student.cpp" />
+    <ClCompile Include="Teacher.cpp" />
     <ClCompile Include="Validator.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
