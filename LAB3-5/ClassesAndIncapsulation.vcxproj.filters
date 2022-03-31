@@ -31,6 +31,18 @@
     <Filter Include="Source Files\Music">
       <UniqueIdentifier>{d4dce6f1-210c-4212-98f3-9edbe0e5df8f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\University">
+      <UniqueIdentifier>{dd91481d-7761-4bf0-882e-edede2ebb870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\University">
+      <UniqueIdentifier>{caafa6d4-c756-4d9a-a88e-1edf34ae6fe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Users">
+      <UniqueIdentifier>{36f0ca53-f60a-4e4b-8f5f-c9e6acffb92e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Users">
+      <UniqueIdentifier>{61f51722-f2d8-4fb8-9bb4-7cc994b23bd7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h">
@@ -78,20 +90,32 @@
     <ClInclude Include="Geometry\GeometricProgram.h">
       <Filter>Header Files\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="Person.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Student.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="TeacherPost.h">
+      <Filter>Header Files\University</Filter>
     </ClInclude>
     <ClInclude Include="Teacher.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\University</Filter>
     </ClInclude>
-    <ClInclude Include="TeacherPost.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Student.h">
+      <Filter>Header Files\University</Filter>
+    </ClInclude>
+    <ClInclude Include="Person.h">
+      <Filter>Header Files\University</Filter>
     </ClInclude>
     <ClInclude Include="ShowPerson.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\University</Filter>
+    </ClInclude>
+    <ClInclude Include="PaidUser.h">
+      <Filter>Header Files\Users</Filter>
+    </ClInclude>
+    <ClInclude Include="Post.h">
+      <Filter>Header Files\Users</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>Header Files\Users</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface.h">
+      <Filter>Header Files\Users</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -140,17 +164,29 @@
     <ClCompile Include="Geometry\GeometricProgram.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="Person.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Teacher.cpp">
+      <Filter>Source Files\University</Filter>
     </ClCompile>
     <ClCompile Include="Student.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Teacher.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\University</Filter>
     </ClCompile>
     <ClCompile Include="ShowPerson.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\University</Filter>
+    </ClCompile>
+    <ClCompile Include="Person.cpp">
+      <Filter>Source Files\University</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface.cpp">
+      <Filter>Source Files\Users</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Source Files\Users</Filter>
+    </ClCompile>
+    <ClCompile Include="PaidUser.cpp">
+      <Filter>Source Files\Users</Filter>
+    </ClCompile>
+    <ClCompile Include="Post.cpp">
+      <Filter>Source Files\Users</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

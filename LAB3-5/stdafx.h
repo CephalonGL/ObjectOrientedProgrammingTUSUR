@@ -34,3 +34,8 @@ using namespace std;
 #include "TeacherPost.h"
 #include "Teacher.h"
 #include "ShowPerson.h"
+
+#include "Post.h"
+#include "User.h"
+#include "PaidUser.h"
+#include "UserInterface.h"
