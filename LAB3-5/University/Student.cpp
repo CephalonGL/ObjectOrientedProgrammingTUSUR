@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 
 Student::Student(string name, 
 				 string surname, 

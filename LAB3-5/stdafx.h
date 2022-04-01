@@ -9,7 +9,6 @@
 
 using namespace std;
 
-#include "Validator.h"
 //Lab 3-4:
 #include "Book.h"
 #include "Route.h"
@@ -17,6 +16,7 @@ using namespace std;
 #include "Airport/Time.h"
 #include "Airport/Flight.h"
 
+#include "Geometry/Validator.h"
 #include "Geometry/Point.h"
 #include "Geometry/Rectangle.h"
 #include "Geometry/Ring.h"
@@ -29,13 +29,19 @@ using namespace std;
 #include "Music/Band.h"
 
 //Lab 5:
-#include "Person.h"
-#include "Student.h"
-#include "TeacherPost.h"
-#include "Teacher.h"
-#include "ShowPerson.h"
+#include "University/Person.h"
+#include "University/Student.h"
+#include "University/TeacherPost.h"
+#include "University/Teacher.h"
+#include "University/ShowPerson.h"
 
-#include "Post.h"
-#include "User.h"
-#include "PaidUser.h"
-#include "UserInterface.h"
+#include "Users/Post.h"
+#include "Users/User.h"
+#include "Users/PaidUser.h"
+#include "Users/UserInterface.h"
+
+#include "DiscountSystem/CategoryType.h"
+#include "DiscountSystem/Product.h"
+#include "DiscountSystem/DiscountBase.h"
+#include "DiscountSystem/PercentDiscount.h"
+#include "DiscountSystem/CertificateDiscount.h"

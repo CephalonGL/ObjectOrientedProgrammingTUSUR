@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 
 void PaidUser::SetPosts(Post* posts, int postsCount)
 {
@@ -9,8 +9,11 @@ void PaidUser::SetPosts(Post* posts, int postsCount)
 	_posts = posts;
 	_postsCount = postsCount;
 }
+
 Post* PaidUser::GetPosts() { return _posts; }
+
 int PaidUser::GetPostsCount() { return _postsCount; }
+
 PaidUser::PaidUser(int id, 
 				   string login, 
 				   string password, 

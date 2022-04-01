@@ -43,6 +43,12 @@
     <Filter Include="Header Files\Users">
       <UniqueIdentifier>{61f51722-f2d8-4fb8-9bb4-7cc994b23bd7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DiscountSystem">
+      <UniqueIdentifier>{5ed98428-ce5e-4e11-9237-cf37dfd101d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DiscountSystem">
+      <UniqueIdentifier>{bede0cb6-23f8-4ede-9c6a-e7222ed378fd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h">
@@ -81,41 +87,56 @@
     <ClInclude Include="Airport\Time.h">
       <Filter>Header Files\Airport</Filter>
     </ClInclude>
-    <ClInclude Include="Validator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Geometry\CollisionManager.h">
       <Filter>Header Files\Geometry</Filter>
     </ClInclude>
     <ClInclude Include="Geometry\GeometricProgram.h">
       <Filter>Header Files\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="TeacherPost.h">
-      <Filter>Header Files\University</Filter>
-    </ClInclude>
-    <ClInclude Include="Teacher.h">
-      <Filter>Header Files\University</Filter>
-    </ClInclude>
-    <ClInclude Include="Student.h">
-      <Filter>Header Files\University</Filter>
-    </ClInclude>
-    <ClInclude Include="Person.h">
-      <Filter>Header Files\University</Filter>
-    </ClInclude>
-    <ClInclude Include="ShowPerson.h">
-      <Filter>Header Files\University</Filter>
-    </ClInclude>
-    <ClInclude Include="PaidUser.h">
+    <ClInclude Include="Users\PaidUser.h">
       <Filter>Header Files\Users</Filter>
     </ClInclude>
-    <ClInclude Include="Post.h">
+    <ClInclude Include="Users\Post.h">
       <Filter>Header Files\Users</Filter>
     </ClInclude>
-    <ClInclude Include="User.h">
+    <ClInclude Include="Users\User.h">
       <Filter>Header Files\Users</Filter>
     </ClInclude>
-    <ClInclude Include="UserInterface.h">
+    <ClInclude Include="Users\UserInterface.h">
       <Filter>Header Files\Users</Filter>
+    </ClInclude>
+    <ClInclude Include="University\Person.h">
+      <Filter>Header Files\University</Filter>
+    </ClInclude>
+    <ClInclude Include="University\ShowPerson.h">
+      <Filter>Header Files\University</Filter>
+    </ClInclude>
+    <ClInclude Include="University\Student.h">
+      <Filter>Header Files\University</Filter>
+    </ClInclude>
+    <ClInclude Include="University\Teacher.h">
+      <Filter>Header Files\University</Filter>
+    </ClInclude>
+    <ClInclude Include="University\TeacherPost.h">
+      <Filter>Header Files\University</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscountSystem\CategoryType.h">
+      <Filter>Header Files\DiscountSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscountSystem\CertificateDiscount.h">
+      <Filter>Header Files\DiscountSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscountSystem\DiscountBase.h">
+      <Filter>Header Files\DiscountSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscountSystem\PercentDiscount.h">
+      <Filter>Header Files\DiscountSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscountSystem\Product.h">
+      <Filter>Header Files\DiscountSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Validator.h">
+      <Filter>Header Files\Geometry</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -155,38 +176,50 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Validator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Geometry\CollisionManager.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
     <ClCompile Include="Geometry\GeometricProgram.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="Teacher.cpp">
+    <ClCompile Include="University\Person.cpp">
       <Filter>Source Files\University</Filter>
     </ClCompile>
-    <ClCompile Include="Student.cpp">
+    <ClCompile Include="University\ShowPerson.cpp">
       <Filter>Source Files\University</Filter>
     </ClCompile>
-    <ClCompile Include="ShowPerson.cpp">
+    <ClCompile Include="University\Student.cpp">
       <Filter>Source Files\University</Filter>
     </ClCompile>
-    <ClCompile Include="Person.cpp">
+    <ClCompile Include="University\Teacher.cpp">
       <Filter>Source Files\University</Filter>
     </ClCompile>
-    <ClCompile Include="UserInterface.cpp">
+    <ClCompile Include="Users\PaidUser.cpp">
       <Filter>Source Files\Users</Filter>
     </ClCompile>
-    <ClCompile Include="User.cpp">
+    <ClCompile Include="Users\Post.cpp">
       <Filter>Source Files\Users</Filter>
     </ClCompile>
-    <ClCompile Include="PaidUser.cpp">
+    <ClCompile Include="Users\User.cpp">
       <Filter>Source Files\Users</Filter>
     </ClCompile>
-    <ClCompile Include="Post.cpp">
+    <ClCompile Include="Users\UserInterface.cpp">
       <Filter>Source Files\Users</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscountSystem\CertificateDiscount.cpp">
+      <Filter>Source Files\DiscountSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscountSystem\DiscountBase.cpp">
+      <Filter>Source Files\DiscountSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscountSystem\PercentDiscount.cpp">
+      <Filter>Source Files\DiscountSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscountSystem\Product.cpp">
+      <Filter>Source Files\DiscountSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Validator.cpp">
+      <Filter>Source Files\Geometry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
