@@ -10,9 +10,9 @@ public:
     PercentDiscount(CategoryType category,
                     int percent);
 
-    void SetPercent(int percent);
-
     int GetPercent();
+
+    void SetPercent(int percent);
 
     double CalculateCost(Product* product) override;
 };

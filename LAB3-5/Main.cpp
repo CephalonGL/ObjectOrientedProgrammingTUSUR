@@ -12,7 +12,8 @@ int main()
 	
 	//Lab 5:
 	Person person = Person("Ivan", "Ivanov", "Ivanovich");
-	Student student = Student("Dmitry", "Dmitriev", "Dmitrievich", 1, 2022);
+	Student student = Student("Dmitry", "Dmitriev", "Dmitrievich", 
+							  1, 2022);
 	Teacher teacher = Teacher("Anton", "Antonov", "Antonovich", Dean);
 	
 	ShowPerson::DemoName(&person);
