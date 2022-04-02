@@ -1,5 +1,8 @@
 #pragma once
 
+/// <summary>
+/// Enum for colors
+/// </summary>
 enum Color
 {
 	Red,

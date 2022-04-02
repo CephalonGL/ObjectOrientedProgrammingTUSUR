@@ -164,6 +164,7 @@ void WrongPointers()
 	Flight flight;
 	Flight* flightPointer = &flight;
 	//Flight* flightPointer = &movie;
+
 	Movie movie;
 	Movie* moviePointer = &movie;
 	//Movie* moviePointer = &flight;
@@ -332,7 +333,7 @@ Circle* CopyCircle(Circle& circleToCopy)
 	return newCircle;
 }
 
-Rectangle* Makerectangle(float length, 
+Rectangle* MakeRectangle(float length, 
 						 float width, 
 						 string color)
 {

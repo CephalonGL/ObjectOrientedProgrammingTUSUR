@@ -15,4 +15,7 @@ void Sort(double* values, int count);
 /// <param name="count">Count of elements</param>
 void DemoSort(double arrayUnit[], int count);
 
+/// <summary>
+/// Demonstrate working of exceptions
+/// </summary>
 void DemoExceptions();

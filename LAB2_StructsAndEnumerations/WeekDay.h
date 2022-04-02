@@ -1,5 +1,8 @@
 #pragma once
 
+/// <summary>
+/// Enum of all week days
+/// </summary>
 enum WeekDay
 {
 	Monday,
