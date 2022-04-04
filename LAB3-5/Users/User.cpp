@@ -9,6 +9,7 @@ string User::CheckLogin(string login)
 {
 	for (int i = 0; i < login.length(); i++)
 	{
+		// TODO: добавить все запретные символы в один массив или строку, перебирать в цикле
 		if (login[i] == '{'
 			|| login[i] == '}'
 			|| login[i] == '<'

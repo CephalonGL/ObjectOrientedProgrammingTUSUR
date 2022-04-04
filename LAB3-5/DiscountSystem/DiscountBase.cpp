@@ -32,6 +32,8 @@ void DiscountBase::ShowCheckWithDiscount(DiscountBase* discount,
 		<< "-----------------------------------------------"<< endl;
 }
 
+// TODO: утечка памяти
+// TODO: этому методу здесь не место. Тем более, базовый класс не должен ничего знать про дочерние
 void DiscountBase::DemoDiscount()
 {
 	Product* notebook = 

@@ -4,6 +4,7 @@ Flight::Flight()
 {
 }
 
+// TODO: именование
 Flight::Flight(int number, string departurePoint, Time departureTime, string destination, Time destinationTime)
 {
 	SetNumber(number);
@@ -26,6 +27,8 @@ void Flight::SetNumber(int number)
 	}
 	else
 	{
+		// TODO: а какой range? Сообщение мало информативно.
+		// Надо по шаблону "Значение должно быть ..., а было ..."
 		throw exception("Error: number is out of range");
 	}
 }
@@ -67,6 +70,7 @@ Time Flight::GetDestinationTime()
 
 void Flight::SetDestinationTime(Time destinationTime)
 {
+	// TODO: сравнение времени с 0 вынести в метод класса Time
 	if (GetDepartureTime().GetYear() == 0
 		&& GetDepartureTime().GetMonth() == 0
 		&& GetDepartureTime().GetDay() == 0
@@ -77,6 +81,7 @@ void Flight::SetDestinationTime(Time destinationTime)
 	}
 	else
 	{
+		// TODO: сравнение двух объектов Time вынести в класс Time. Желательно в виде перегрузки оператора
 		if (GetDepartureTime().GetYear() >
 			destinationTime.GetYear()
 
@@ -125,6 +130,8 @@ void Flight::SetDestinationTime(Time destinationTime)
 
 void Flight::DemoFlightWithTime()
 {
+	// TODO: при работе с вектором можно было добавлять элементы через конструктор класса.
+	// Вызов отдельных сеттеров - это проблема статических массивов объектов
 	vector<Flight> flights;
 	const int FLIGHTS_COUNT = 5;
 
@@ -164,6 +171,7 @@ void Flight::DemoFlightWithTime()
 			<< flights[i].GetDeparturePoint() << " - "
 			<< flights[i].GetDestination()
 			<< "Departure: ";
+		// TODO: формирование строки с текущей датой и текущим временем тоже стоит вынести в класс Time GetFormattedDate() и GetFormattedTime()
 		if (flights[i].GetDepartureTime().GetDay() < 10)
 		{
 			cout << "0" << flights[i].GetDepartureTime().GetDay()

@@ -52,6 +52,7 @@ void Rectangle::SetWidth(double width)
 	}
 	else
 	{
+		// TODO: во всех классах принципиально разные подходы к сообщениям об ошибке. Сделать единообразно
 		throw exception("Error: width < 0.");
 	}
 }

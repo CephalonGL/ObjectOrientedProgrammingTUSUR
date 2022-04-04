@@ -11,6 +11,7 @@ private:
 	double _width;
 
 public:
+	// TODO: точка намеренно по значению, а не по ссылке?
 	Rectangle(double length,
 			  double width,
 			  Point center);
@@ -19,6 +20,7 @@ public:
 
 	void SetCenter(double x, double y);
 
+	// TODO: точка намеренно передается по значению, а не по ссылке?
 	void SetCenter(Point center);
 
 	double GetLength();
@@ -29,7 +31,7 @@ public:
 
 	void SetWidth(double width);
 
-
+	// TODO: это клиентский код, а не часть класса
 	static Point& CalculateAverageCenterValue(vector<Rectangle> rectangles,
 											 int rectanglesCount);
 };

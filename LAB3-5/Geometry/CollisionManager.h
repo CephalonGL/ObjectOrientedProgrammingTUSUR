@@ -5,6 +5,7 @@
 static class CollisionManager
 {
 private:
+	// TODO: оно точно того стоило, создавать столько мелких закрытых методов?
 	static double GetDeltaX(Point& first,
 							Point& second);
 
