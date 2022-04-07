@@ -13,7 +13,7 @@ private:
 public:
 
 	Album();
-	// TODO: при передаче вектора по значению будет создаваться его локальная копия?
+	// TODO: РїСЂРё РїРµСЂРµРґР°С‡Рµ РІРµРєС‚РѕСЂР° РїРѕ Р·РЅР°С‡РµРЅРёСЋ Р±СѓРґРµС‚ СЃРѕР·РґР°РІР°С‚СЊСЃСЏ РµРіРѕ Р»РѕРєР°Р»СЊРЅР°СЏ РєРѕРїРёСЏ?
 	Album(string name,
 		  int releaseYear,
 		  vector<Song> songs);
@@ -24,9 +24,9 @@ public:
 	int GetReleaseYear();
 	void SetReleaseYear(int releaseYear);
 
-	// TODO: по значению?
+	// TODO: РїРѕ Р·РЅР°С‡РµРЅРёСЋ?
 	vector<Song> GetSongs();
-	// TODO: по значению? Как это отработает?
+	// TODO: РїРѕ Р·РЅР°С‡РµРЅРёСЋ? РљР°Рє СЌС‚Рѕ РѕС‚СЂР°Р±РѕС‚Р°РµС‚?
 	void SetSongs(vector<Song> songs);
 
 };

@@ -122,7 +122,7 @@ void Band::DemoBand()
 {
 	const int COUNT_OF_ALBUMS = 3;
 	vector<Song> songs[COUNT_OF_ALBUMS];
-	songs[0].push_back(Song("I Don’t Know Why", 190, Electro));
+	songs[0].push_back(Song("I Donâ€™t Know Why", 190, Electro));
 	songs[0].push_back(Song("Whatever It Takes", 201, Electro));
 	songs[0].push_back(Song("Believer", 204, Electro));
 	songs[0].push_back(Song("Walking The Wire", 233, Electro));

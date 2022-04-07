@@ -1,6 +1,6 @@
 #pragma once
 
-// TODO: Position, νε Post
+// TODO: Position, Π½Πµ Post
 enum TeacherPost
 {
 	Lecturer,

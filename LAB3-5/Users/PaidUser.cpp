@@ -23,7 +23,7 @@ PaidUser::PaidUser(int id,
 	SetPosts(posts, postsCount);
 }
 
-//BUG: Зачем такой конструктор?
+//BUG: Р—Р°С‡РµРј С‚Р°РєРѕР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ?
 PaidUser::PaidUser(int id, string login, string password) :
 	PaidUser(id, login, password, nullptr, 0)
 {

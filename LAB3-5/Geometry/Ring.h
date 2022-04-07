@@ -17,7 +17,7 @@ private:
 	double AssertOnPositiveValue(double value);
 
 public:
-	// TODO: точка по ссылке или по значению?
+	// TODO: С‚РѕС‡РєР° РїРѕ СЃСЃС‹Р»РєРµ РёР»Рё РїРѕ Р·РЅР°С‡РµРЅРёСЋ?
 	Ring(double innerRadius,
 		 double outerRadius,
 		 Point center);
@@ -31,7 +31,7 @@ public:
 	void SetOuterRadius(const double& outerRadius);
 
 	Point& GetCenter();
-	// TODO: а здесь уже по ссылке
+	// TODO: Р° Р·РґРµСЃСЊ СѓР¶Рµ РїРѕ СЃСЃС‹Р»РєРµ
 	void SetCenter(const Point& center);
 
 	double GetArea();

@@ -1,4 +1,4 @@
-﻿#include "../stdafx.h"
+#include "../stdafx.h"
 
 User* UserInterface::Login(User** users,
 						   int usersCount,
