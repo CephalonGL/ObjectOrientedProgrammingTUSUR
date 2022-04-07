@@ -1,13 +1,13 @@
 #pragma once
 
-// TODO: а вас на СД не заставляли комментировать код?
+// TODO: Р° РІР°СЃ РЅР° РЎР” РЅРµ Р·Р°СЃС‚Р°РІР»СЏР»Рё РєРѕРјРјРµРЅС‚РёСЂРѕРІР°С‚СЊ РєРѕРґ?
 class Flight
 {
 private:
 
 	int _number;
 
-	// TODO: откуда слово Point? У слова destination его нет, и это правильно
+	// TODO: РѕС‚РєСѓРґР° СЃР»РѕРІРѕ Point? РЈ СЃР»РѕРІР° destination РµРіРѕ РЅРµС‚, Рё СЌС‚Рѕ РїСЂР°РІРёР»СЊРЅРѕ
 	string _departurePoint;
 
 	Time _departureTime;
@@ -19,7 +19,7 @@ private:
 public:
 
 	Flight();
-	// TODO: в локальных переменных тоже исправить именование
+	// TODO: РІ Р»РѕРєР°Р»СЊРЅС‹С… РїРµСЂРµРјРµРЅРЅС‹С… С‚РѕР¶Рµ РёСЃРїСЂР°РІРёС‚СЊ РёРјРµРЅРѕРІР°РЅРёРµ
 	Flight(int number,
 		   string departurePoint,
 		   Time departureTime,
@@ -29,9 +29,9 @@ public:
 	int GetNumber();
 	void SetNumber(int number);
 
-    // TODO: именование
+    // TODO: РёРјРµРЅРѕРІР°РЅРёРµ
 	string GetDeparturePoint();
-	// TODO: именование
+	// TODO: РёРјРµРЅРѕРІР°РЅРёРµ
 	void SetDeparturePoint(string departurePoint);
 
 	Time GetDepartureTime();
@@ -43,7 +43,7 @@ public:
 	Time GetDestinationTime();
 	void SetDestinationTime(Time destinationTime);
 
-	// TODO: этот метод относиться к клиентскому коду, и не должен быть частью класса
+	// TODO: СЌС‚РѕС‚ РјРµС‚РѕРґ РѕС‚РЅРѕСЃРёС‚СЊСЃСЏ Рє РєР»РёРµРЅС‚СЃРєРѕРјСѓ РєРѕРґСѓ, Рё РЅРµ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ С‡Р°СЃС‚СЊСЋ РєР»Р°СЃСЃР°
 	static void DemoFlightWithTime();
 
 	Time GetFlightTime();

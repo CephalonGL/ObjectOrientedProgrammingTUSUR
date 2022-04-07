@@ -4,7 +4,7 @@ Flight::Flight()
 {
 }
 
-// TODO: именование
+// TODO: РёРјРµРЅРѕРІР°РЅРёРµ
 Flight::Flight(int number, string departurePoint, Time departureTime, string destination, Time destinationTime)
 {
 	SetNumber(number);
@@ -27,8 +27,8 @@ void Flight::SetNumber(int number)
 	}
 	else
 	{
-		// TODO: а какой range? Сообщение мало информативно.
-		// Надо по шаблону "Значение должно быть ..., а было ..."
+		// TODO: Р° РєР°РєРѕР№ range? РЎРѕРѕР±С‰РµРЅРёРµ РјР°Р»Рѕ РёРЅС„РѕСЂРјР°С‚РёРІРЅРѕ.
+		// РќР°РґРѕ РїРѕ С€Р°Р±Р»РѕРЅСѓ "Р—РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ ..., Р° Р±С‹Р»Рѕ ..."
 		throw exception("Error: number is out of range");
 	}
 }
@@ -70,7 +70,7 @@ Time Flight::GetDestinationTime()
 
 void Flight::SetDestinationTime(Time destinationTime)
 {
-	// TODO: сравнение времени с 0 вынести в метод класса Time
+	// TODO: СЃСЂР°РІРЅРµРЅРёРµ РІСЂРµРјРµРЅРё СЃ 0 РІС‹РЅРµСЃС‚Рё РІ РјРµС‚РѕРґ РєР»Р°СЃСЃР° Time
 	if (GetDepartureTime().GetYear() == 0
 		&& GetDepartureTime().GetMonth() == 0
 		&& GetDepartureTime().GetDay() == 0
@@ -81,7 +81,7 @@ void Flight::SetDestinationTime(Time destinationTime)
 	}
 	else
 	{
-		// TODO: сравнение двух объектов Time вынести в класс Time. Желательно в виде перегрузки оператора
+		// TODO: СЃСЂР°РІРЅРµРЅРёРµ РґРІСѓС… РѕР±СЉРµРєС‚РѕРІ Time РІС‹РЅРµСЃС‚Рё РІ РєР»Р°СЃСЃ Time. Р–РµР»Р°С‚РµР»СЊРЅРѕ РІ РІРёРґРµ РїРµСЂРµРіСЂСѓР·РєРё РѕРїРµСЂР°С‚РѕСЂР°
 		if (GetDepartureTime().GetYear() >
 			destinationTime.GetYear()
 
@@ -130,8 +130,8 @@ void Flight::SetDestinationTime(Time destinationTime)
 
 void Flight::DemoFlightWithTime()
 {
-	// TODO: при работе с вектором можно было добавлять элементы через конструктор класса.
-	// Вызов отдельных сеттеров - это проблема статических массивов объектов
+	// TODO: РїСЂРё СЂР°Р±РѕС‚Рµ СЃ РІРµРєС‚РѕСЂРѕРј РјРѕР¶РЅРѕ Р±С‹Р»Рѕ РґРѕР±Р°РІР»СЏС‚СЊ СЌР»РµРјРµРЅС‚С‹ С‡РµСЂРµР· РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР°.
+	// Р’С‹Р·РѕРІ РѕС‚РґРµР»СЊРЅС‹С… СЃРµС‚С‚РµСЂРѕРІ - СЌС‚Рѕ РїСЂРѕР±Р»РµРјР° СЃС‚Р°С‚РёС‡РµСЃРєРёС… РјР°СЃСЃРёРІРѕРІ РѕР±СЉРµРєС‚РѕРІ
 	vector<Flight> flights;
 	const int FLIGHTS_COUNT = 5;
 
@@ -171,7 +171,7 @@ void Flight::DemoFlightWithTime()
 			<< flights[i].GetDeparturePoint() << " - "
 			<< flights[i].GetDestination()
 			<< "Departure: ";
-		// TODO: формирование строки с текущей датой и текущим временем тоже стоит вынести в класс Time GetFormattedDate() и GetFormattedTime()
+		// TODO: С„РѕСЂРјРёСЂРѕРІР°РЅРёРµ СЃС‚СЂРѕРєРё СЃ С‚РµРєСѓС‰РµР№ РґР°С‚РѕР№ Рё С‚РµРєСѓС‰РёРј РІСЂРµРјРµРЅРµРј С‚РѕР¶Рµ СЃС‚РѕРёС‚ РІС‹РЅРµСЃС‚Рё РІ РєР»Р°СЃСЃ Time GetFormattedDate() Рё GetFormattedTime()
 		if (flights[i].GetDepartureTime().GetDay() < 10)
 		{
 			cout << "0" << flights[i].GetDepartureTime().GetDay()

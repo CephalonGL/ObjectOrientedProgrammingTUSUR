@@ -30,7 +30,7 @@ void DemoFlight(string DeparturePoint = "Novosibirsk, Tolmachevo",
 /// <param name="ReleaseYear">Release year of movie</param>
 /// <param name="Genre">Movie genre</param>
 /// <param name="Rating">Movie rating</param>
-void DemoMovie(string Name = "Star Wars: Episode III – "
+void DemoMovie(string Name = "Star Wars: Episode III â€“ "
 			   "Revenge of the Sith",
 			   unsigned int DurationMinutes = 140,
 			   unsigned int ReleaseYear = 2005,

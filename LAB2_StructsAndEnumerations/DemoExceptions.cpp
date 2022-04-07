@@ -36,7 +36,7 @@ void DemoSort(double arrayUnit[], int count)
 		return;
 	}
 	cout << "Sort successful! Count = " << count << '.' << endl;
-	// TODO: в size_t в таком приложении большого смысла нет +
+	// TODO: РІ size_t РІ С‚Р°РєРѕРј РїСЂРёР»РѕР¶РµРЅРёРё Р±РѕР»СЊС€РѕРіРѕ СЃРјС‹СЃР»Р° РЅРµС‚ +
 	for (int i = 0; i < count; i++)
 	{
 		cout << arrayUnit[i] << '\t';
