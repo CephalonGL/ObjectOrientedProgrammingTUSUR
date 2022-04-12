@@ -19,8 +19,8 @@ private:
 public:
 	// TODO: точка по ссылке или по значению?
 	Ring(double innerRadius,
-		 double outerRadius,
-		 Point center);
+		 double outerRadius, 
+		 Point& center);
 
 	~Ring();
 

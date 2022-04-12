@@ -7,8 +7,8 @@ private:
 
 	int _number;
 
-	// TODO: откуда слово Point? У слова destination его нет, и это правильно
-	string _departurePoint;
+	// TODO: откуда слово Point? У слова destination его нет, и это правильно +
+	string _departure;
 
 	Time _departureTime;
 
@@ -19,9 +19,9 @@ private:
 public:
 
 	Flight();
-	// TODO: в локальных переменных тоже исправить именование
+	// TODO: в локальных переменных тоже исправить именование +
 	Flight(int number,
-		   string departurePoint,
+		   string departure,
 		   Time departureTime,
 		   string destination,
 		   Time destinationTime);
@@ -29,10 +29,10 @@ public:
 	int GetNumber();
 	void SetNumber(int number);
 
-    // TODO: именование
-	string GetDeparturePoint();
-	// TODO: именование
-	void SetDeparturePoint(string departurePoint);
+    // TODO: именование +
+	string GetDeparture();
+	// TODO: именование +
+	void SetDeparturePoint(string departure);
 
 	Time GetDepartureTime();
 	void SetDepartureTime(Time departureTime);

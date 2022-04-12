@@ -61,7 +61,7 @@ int Time::GetDay()
 void Time::SetDay(int day)
 {
 	if (day <= 30
-		&& day >=1)
+		&& day >= 1)
 	{
 		this->_day = day;
 	}
@@ -79,7 +79,7 @@ int Time::GetHour()
 void Time::SetHour(int hour)
 {
 	if (hour >= 0
-		&& hour <=24)
+		&& hour <= 24)
 	{
 		this->_hour = hour;
 	}
@@ -104,5 +104,66 @@ void Time::SetMinute(int minute)
 	else
 	{
 		throw exception("Error: minute is out of range");
+	}
+}
+
+bool Time::IsNull()
+{
+	if (GetYear() == 0
+		&& GetMonth() == 0
+		&& GetDay() == 0
+		&& GetHour() == 0
+		&& GetMinute() == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool Time::operator==(Time& another)
+{
+	if (GetYear() >
+		another.GetYear()
+
+		|| (GetYear() <=
+			another.GetYear()
+			&& GetMonth() >
+			another.GetMonth())
+
+		|| (GetYear() <=
+			another.GetYear()
+			&& GetMonth() <=
+			another.GetMonth()
+			&& GetDay() >
+			another.GetDay())
+
+		|| (GetYear() <=
+			another.GetYear()
+			&& GetMonth() <=
+			another.GetMonth()
+			&& GetDay() <=
+			another.GetDay()
+			&& GetHour() >
+			another.GetHour())
+
+		|| (GetYear() <=
+			another.GetYear()
+			&& GetMonth() <=
+			another.GetMonth()
+			&& GetDay() <=
+			another.GetDay()
+			&& GetHour() <=
+			another.GetHour()
+			&& GetMinute() >
+			another.GetMinute()))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 	}
 }

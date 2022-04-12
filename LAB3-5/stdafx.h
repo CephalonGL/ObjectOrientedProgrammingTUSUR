@@ -33,7 +33,7 @@ using namespace std;
 #include "University/Student.h"
 #include "University/TeacherPost.h"
 #include "University/Teacher.h"
-#include "University/ShowPerson.h"
+#include "University/PersonProgram.h"
 
 #include "Users/Post.h"
 #include "Users/User.h"

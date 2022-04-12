@@ -23,24 +23,24 @@ void Flight::SetNumber(int number)
 {
 	if (number >= 0)
 	{
-		this->_number = number;
+		_number = number;
 	}
 	else
 	{
-		// TODO: а какой range? Сообщение мало информативно.
+		// TODO: а какой range? Сообщение мало информативно.+
 		// Надо по шаблону "Значение должно быть ..., а было ..."
-		throw exception("Error: number is out of range");
+		throw exception("Error: number must be more or equal to 0.");
 	}
 }
 
-string Flight::GetDeparturePoint()
+string Flight::GetDeparture()
 {
-	return _departurePoint;
+	return _departure;
 }
 
 void Flight::SetDeparturePoint(string departurePoint)
 {
-	this->_departurePoint = departurePoint;
+	this->_departure = departurePoint;
 }
 
 Time Flight::GetDepartureTime()
@@ -70,52 +70,15 @@ Time Flight::GetDestinationTime()
 
 void Flight::SetDestinationTime(Time destinationTime)
 {
-	// TODO: сравнение времени с 0 вынести в метод класса Time
-	if (GetDepartureTime().GetYear() == 0
-		&& GetDepartureTime().GetMonth() == 0
-		&& GetDepartureTime().GetDay() == 0
-		&& GetDepartureTime().GetHour() == 0
-		&& GetDepartureTime().GetMinute() == 0)
+	// TODO: сравнение времени с 0 вынести в метод класса Time +
+	if (GetDepartureTime().IsNull())
 	{
 		throw exception("Error: define departure time at first.");
 	}
 	else
 	{
-		// TODO: сравнение двух объектов Time вынести в класс Time. Желательно в виде перегрузки оператора
-		if (GetDepartureTime().GetYear() >
-			destinationTime.GetYear()
-
-			|| (GetDepartureTime().GetYear() <=
-				destinationTime.GetYear()
-				&& GetDepartureTime().GetMonth() >
-				destinationTime.GetMonth())
-
-			|| (GetDepartureTime().GetYear() <=
-				destinationTime.GetYear()
-				&& GetDepartureTime().GetMonth() <=
-				destinationTime.GetMonth()
-				&& GetDepartureTime().GetDay() >
-				destinationTime.GetDay())
-
-			|| (GetDepartureTime().GetYear() <=
-				destinationTime.GetYear()
-				&& GetDepartureTime().GetMonth() <=
-				destinationTime.GetMonth()
-				&& GetDepartureTime().GetDay() <=
-				destinationTime.GetDay()
-				&& GetDepartureTime().GetHour() >
-				destinationTime.GetHour())
-
-			|| (GetDepartureTime().GetYear() <=
-				destinationTime.GetYear()
-				&& GetDepartureTime().GetMonth() <=
-				destinationTime.GetMonth()
-				&& GetDepartureTime().GetDay() <=
-				destinationTime.GetDay()
-				&& GetDepartureTime().GetHour() <=
-				destinationTime.GetHour()
-				&& GetDepartureTime().GetMinute() >
-				destinationTime.GetMinute()))
+		// TODO: сравнение двух объектов Time вынести в класс Time. Желательно в виде перегрузки оператора+
+		if (GetDepartureTime() == destinationTime)
 		{
 			throw exception("Error: Time travel is not allowed."
 							" destination time can not be before"
@@ -123,19 +86,35 @@ void Flight::SetDestinationTime(Time destinationTime)
 		}
 		else
 		{
-			this->_destinationTime = destinationTime;
+			_destinationTime = destinationTime;
 		}
 	}
 }
 
 void Flight::DemoFlightWithTime()
 {
-	// TODO: при работе с вектором можно было добавлять элементы через конструктор класса.
+	// TODO: при работе с вектором можно было добавлять элементы через конструктор класса. +
 	// Вызов отдельных сеттеров - это проблема статических массивов объектов
-	vector<Flight> flights;
+	vector<Flight> flights
+	{
+		Flight(0, "Krasnodar", Time(2022, 1, 20, 12, 00),
+		"Tomsk", Time(2022, 1, 20, 16, 00)),
+
+		Flight(1,"Tomsk", Time(2022, 1, 20, 12, 00),
+		"Tomsk", Time(2022, 1, 20, 16, 00)),
+
+		Flight(2,"Novosibirsk", Time(2022, 4, 10, 10, 00),
+		"Yaroslavl", Time(2022, 4, 10, 14, 00)),
+
+		Flight(3,"Moscow", Time(2022, 10, 4, 13, 00),
+		"Novosibirsk", Time(2022, 10, 4, 17, 00)),
+
+		Flight(4,"Yaroslavl", Time(2022, 4, 24, 14, 00),
+		"Novosibirsk", Time(2022, 4, 24, 18, 00))
+	};
 	const int FLIGHTS_COUNT = 5;
 
-	flights[0].SetNumber(0);
+	/*flights[0].SetNumber(0);
 	flights[0].SetDeparturePoint("Krasnodar");
 	flights[0].SetDepartureTime(Time(2022, 1, 20, 12, 00));
 	flights[0].SetDestination("Tomsk");
@@ -163,12 +142,12 @@ void Flight::DemoFlightWithTime()
 	flights[4].SetDeparturePoint("Yaroslavl");
 	flights[4].SetDepartureTime(Time(2022, 4, 24, 14, 00));
 	flights[4].SetDestination("Novosibirsk");
-	flights[4].SetDestinationTime(Time(2022, 4, 24, 18, 00));
+	flights[4].SetDestinationTime(Time(2022, 4, 24, 18, 00));*/
 
 	for (int i = 0; i < FLIGHTS_COUNT; i++)
 	{
 		cout << flights[i].GetNumber() << " "
-			<< flights[i].GetDeparturePoint() << " - "
+			<< flights[i].GetDeparture() << " - "
 			<< flights[i].GetDestination()
 			<< "Departure: ";
 		// TODO: формирование строки с текущей датой и текущим временем тоже стоит вынести в класс Time GetFormattedDate() и GetFormattedTime()
@@ -197,7 +176,7 @@ void Flight::DemoFlightWithTime()
 			<< flights[i].GetDestinationTime().GetMinute() << endl;
 		cout << "Flight time: " << flights[i].GetFlightTime().GetHour()
 			<< " h " << flights[i].GetFlightTime().GetMinute()
-			<<" min" << endl;
+			<< " min" << endl;
 
 	}
 }
@@ -215,7 +194,7 @@ Time Flight::GetFlightTime()
 	if (this->GetDestinationTime().GetDay()
 		- this->GetDepartureTime().GetDay() == 1)
 	{
-		destinationTimeMinutes += 
+		destinationTimeMinutes +=
 			COUNT_HOURS_IN_DAY * COUNT_MINUTES_IN_HOUR;
 	}
 	int flightTimeMinutes = destinationTimeMinutes - departureTimeMinutes;

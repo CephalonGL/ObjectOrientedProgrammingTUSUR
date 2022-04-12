@@ -170,7 +170,7 @@
     <ClInclude Include="Music\Song.h" />
     <ClInclude Include="Route.h" />
     <ClInclude Include="University\Person.h" />
-    <ClInclude Include="University\ShowPerson.h" />
+    <ClInclude Include="University\PersonProgram.h" />
     <ClInclude Include="University\Student.h" />
     <ClInclude Include="University\Teacher.h" />
     <ClInclude Include="University\TeacherPost.h" />
@@ -364,7 +364,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="University\ShowPerson.cpp">
+    <ClCompile Include="University\PersonProgram.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>

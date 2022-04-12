@@ -11,17 +11,17 @@ private:
 	double _width;
 
 public:
-	// TODO: точка намеренно по значению, а не по ссылке?
+	// TODO: точка намеренно по значению, а не по ссылке? +
 	Rectangle(double length,
-			  double width,
-			  Point center);
+			  double width, 
+			  Point& center);
 
 	Point& GetCenter();
 
 	void SetCenter(double x, double y);
 
-	// TODO: точка намеренно передается по значению, а не по ссылке?
-	void SetCenter(Point center);
+	// TODO: точка намеренно передается по значению, а не по ссылке? +
+	void SetCenter(Point& center);
 
 	double GetLength();
 

@@ -11,22 +11,24 @@ private:
 
 	void SetId(int id);
 
-	string CheckLogin(string login);
+	string& CheckLogin(string& login);
 
 public:
-	void SetLogin(string login);
+	void SetLogin(string& login);
 
-	void SetPassword(string password);
+	void SetPassword(string& password);
 
 	int GetId();
 
-	string GetLogin();
+	const string& GetLogin();
 
-	string GetPassword();
+	const string& GetPassword();
 
-	User(int id, string login, string password);
+	User(int id, 
+		 string& login, 
+		 string& password);
 
-	bool IsCorrectPassword(string password);
+	bool IsCorrectPassword(string& password);
 };
 
 

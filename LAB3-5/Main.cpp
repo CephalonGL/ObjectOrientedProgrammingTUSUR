@@ -16,9 +16,9 @@ int main()
 							  1, 2022);
 	Teacher teacher = Teacher("Anton", "Antonov", "Antonovich", Dean);
 	
-	ShowPerson::DemoName(&person);
-	ShowPerson::DemoName(&student);
-	ShowPerson::DemoName(&teacher);
+	PersonProgram::DemoName(&person);
+	PersonProgram::DemoName(&student);
+	PersonProgram::DemoName(&teacher);
 	
 	UserInterface::DemoUsers();
 

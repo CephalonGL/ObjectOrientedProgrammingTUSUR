@@ -1,7 +1,7 @@
 #pragma once
 
-// TODO: Position, не Post
-enum TeacherPost
+// TODO: Position, не Post +
+enum TeacherPosition
 {
 	Lecturer,
 	Professor,

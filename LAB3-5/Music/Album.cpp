@@ -4,7 +4,7 @@ Album::Album()
 {
 }
 
-Album::Album(string name, int releaseYear, vector<Song> songs)
+Album::Album(string& name, int releaseYear, vector<Song>& songs)
 {
 	SetName(name);
 	SetReleaseYear(releaseYear);
@@ -38,12 +38,12 @@ void Album::SetReleaseYear(int releaseYear)
 	}
 }
 
-vector<Song> Album::GetSongs()
+vector<Song>& Album::GetSongs()
 {
 	return _songs;
 }
 
-void Album::SetSongs(vector<Song> songs)
+void Album::SetSongs(vector<Song>& songs)
 {
 	_songs = songs;
 }

@@ -32,7 +32,7 @@ void DiscountBase::ShowCheckWithDiscount(DiscountBase* discount,
 		<< "-----------------------------------------------"<< endl;
 }
 
-// TODO: утечка памяти
+// TODO: утечка памяти +
 // TODO: этому методу здесь не место. Тем более, базовый класс не должен ничего знать про дочерние
 void DiscountBase::DemoDiscount()
 {
@@ -61,4 +61,9 @@ void DiscountBase::DemoDiscount()
 	cout << endl << "Certificate discount: " << endl;
 	ShowCheckWithDiscount(&certificateDiscount, products);
 	cout << endl;
+
+	delete notebook;
+	delete computerMouse;
+	delete personalComputer;
+	delete keyboard;
 }

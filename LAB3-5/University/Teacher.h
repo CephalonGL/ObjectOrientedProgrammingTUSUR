@@ -4,15 +4,15 @@ class Teacher :
     public Person
 {
 private:
-    TeacherPost _post;
+    TeacherPosition _post;
 
 public:
     Teacher(string name,
             string surname,
             string patronymic,
-            TeacherPost post);
+            TeacherPosition post);
 
-    TeacherPost GetPost();
-    void SetTeacherPost(TeacherPost post);
+    TeacherPosition GetPost();
+    void SetTeacherPost(TeacherPosition post);
 };
 

@@ -3,18 +3,18 @@
 Teacher::Teacher(string name,
 				 string surname,
 				 string patronymic,
-				 TeacherPost post)
+				 TeacherPosition post)
 	: Person(name, surname, patronymic)
 {
 	SetTeacherPost(post);
 }
 
-TeacherPost Teacher::GetPost()
+TeacherPosition Teacher::GetPost()
 {
 	return _post;
 }
 
-void Teacher::SetTeacherPost(TeacherPost post)
+void Teacher::SetTeacherPost(TeacherPosition post)
 {
 	_post = post;
 }

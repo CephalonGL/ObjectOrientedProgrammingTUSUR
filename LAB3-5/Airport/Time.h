@@ -36,5 +36,9 @@ public:
 
 	int GetMinute();
 	void SetMinute(int minute);
+
+	bool IsNull();
+	
+	bool operator == (Time& another);
 };
 

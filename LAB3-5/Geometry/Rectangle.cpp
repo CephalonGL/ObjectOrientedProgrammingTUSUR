@@ -1,6 +1,6 @@
 #include "..\stdafx.h"
 
-Rectangle::Rectangle(double length, double width, Point center)
+Rectangle::Rectangle(double length, double width, Point& center)
 {
 	SetLength(length);
 	SetWidth(width);
@@ -17,7 +17,7 @@ void Rectangle::SetCenter(double x, double y)
 	_center = Point(x, y);
 }
 
-void Rectangle::SetCenter(Point center)
+void Rectangle::SetCenter(Point& center)
 {
 	_center = center;
 }

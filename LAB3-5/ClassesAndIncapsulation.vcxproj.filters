@@ -108,7 +108,7 @@
     <ClInclude Include="University\Person.h">
       <Filter>Header Files\University</Filter>
     </ClInclude>
-    <ClInclude Include="University\ShowPerson.h">
+    <ClInclude Include="University\PersonProgram.h">
       <Filter>Header Files\University</Filter>
     </ClInclude>
     <ClInclude Include="University\Student.h">
@@ -185,7 +185,7 @@
     <ClCompile Include="University\Person.cpp">
       <Filter>Source Files\University</Filter>
     </ClCompile>
-    <ClCompile Include="University\ShowPerson.cpp">
+    <ClCompile Include="University\PersonProgram.cpp">
       <Filter>Source Files\University</Filter>
     </ClCompile>
     <ClCompile Include="University\Student.cpp">

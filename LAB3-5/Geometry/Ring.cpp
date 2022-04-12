@@ -16,8 +16,8 @@ double Ring::AssertOnPositiveValue(double value)
 }
 
 Ring::Ring(double innerRadius,
-		   double outerRadius,
-		   Point center)
+
+		   double outerRadius, Point& center)
 {
 	SetInnerRadius(innerRadius);
 	SetOuterRadius(outerRadius);
