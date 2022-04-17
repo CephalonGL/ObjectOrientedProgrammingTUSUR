@@ -1,6 +1,6 @@
 #include "../stdafx.h"
 
-User* UserInterface::Login(User** users,
+User* UserProgram::Login(User** users,
 						   int usersCount,
 						   string enteredLogin,
 						   string enteredPassword)
@@ -22,7 +22,7 @@ User* UserInterface::Login(User** users,
 	return nullptr;
 }
 
-void UserInterface::DemoUsers()
+void UserProgram::DemoUsers()
 {
 	User** users = new User * []
 	{
@@ -40,12 +40,12 @@ void UserInterface::DemoUsers()
 	};
 	string login = "megazver";
 	string password = "password";
-	User* loginedUser = UserInterface::Login(users, 4, login, password);
+	User* loginedUser = UserProgram::Login(users, 4, login, password);
 	cout << "Signed in as: " << loginedUser->GetLogin() << endl;
 	login = "system_exe";
 	password = "UgfkDGmU";
 	User* loginedPaidUser =
-		UserInterface::Login(paidUsers, 4, login, password);
+		UserProgram::Login(paidUsers, 4, login, password);
 	cout << "Signed in as: " << loginedPaidUser->GetLogin() << endl;
 	for (int i = 0; i < 4; i++)
 	{

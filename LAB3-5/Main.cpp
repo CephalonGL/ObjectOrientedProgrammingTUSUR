@@ -1,11 +1,14 @@
 #include "stdafx.h"
+#include "ProgramFlight.h"
+#include "ProgramDiscount.h"
+#include "ProgramBand.h"
 
 int main()
 {
 	//Lab 3-4:
 	DemoBook();
-	Flight::DemoFlightWithTime();
-	Band::DemoBand();
+	FlightProgram::DemoFlightWithTime();
+	BandProgram::DemoBand();
 	GeometricProgram::DemoRectangleWithPoint();
 	GeometricProgram::DemoRing();
 	GeometricProgram::DemoCollision();
@@ -20,8 +23,8 @@ int main()
 	PersonProgram::DemoName(&student);
 	PersonProgram::DemoName(&teacher);
 	
-	UserInterface::DemoUsers();
+	UserProgram::DemoUsers();
 
-	DiscountBase::DemoDiscount();
+	DiscountProgram::DemoDiscount();
 	return 0;
 }

@@ -81,8 +81,9 @@ int ReadReleaseYear()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect release year."
-							   " Repeat, please.\n");
+			Console::WriteLine("Error: release year must be more than 0,"
+							   " and less than " + CURRENT_YEAR);
+			Console::WriteLine(" Repeat, please.\n");
 		}
 	}
 }
@@ -98,7 +99,8 @@ int ReadPageCount()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect page count. Repeat, please.\n");
+			Console::WriteLine("Error: page count must be more or equal to"
+							   " 0, but it is less than 0. Repeat, please.\n");
 		}
 	}
 }
@@ -115,8 +117,9 @@ int ReadAuthorCount()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect authors count."
-							   " Repeat, please.\n");
+			//BUG: ¬ынести константы и заменить строки на константы
+			Console::WriteLine("Error: authors count bust be in range of"
+							   " 1 to 10. Repeat, please.\n");
 		}
 	}
 }
@@ -133,8 +136,9 @@ int ReadBookCount()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect count of books."
-							   " Repeat, please.\n");
+			//BUG: ¬ынести константы и заменить строки на константы
+			Console::WriteLine("Error: count of books must be in range of "
+							   "1 to 6. Repeat, please.\n");
 		}
 	}
 }

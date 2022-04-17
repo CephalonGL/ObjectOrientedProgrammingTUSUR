@@ -15,11 +15,11 @@ void DemoRectangle(float Length = 50,
 /// Demonstrate work of Flight class
 /// </summary>
 /// <param name="DeparturePoint">Departure point of flight</param>
-/// <param name="DestinationPoint">Destination point of flight</param>
+/// <param name="Destination">Destination point of flight</param>
 /// <param name="FlightDurationMinutes">Duration of 
 /// flight in minutes</param>
 void DemoFlight(string DeparturePoint = "Novosibirsk, Tolmachevo",
-				string DestinationPoint = "Krasnodar, Pashkovsky",
+				string Destination = "Krasnodar, Pashkovsky",
 				unsigned int FlightDurationMinutes = 240);
 
 /// <summary>
@@ -151,12 +151,12 @@ Rectangle* CopyRectangle(Rectangle& rectangleToCopy);
 /// Create new flight unit
 /// </summary>
 /// <param name="DeparturePoint">departure point of flight</param>
-/// <param name="DestinationPoint">Destination point of flight</param>
+/// <param name="Destination">Destination point of flight</param>
 /// <param name="FlightDurationMinutes">Duration of flight 
 /// in minute</param>
 /// <returns>New flight</returns>
 Flight* MakeFlight(string DeparturePoint,
-				   string DestinationPoint,
+				   string Destination,
 				   unsigned int FlightDurationMinutes);
 
 /// <summary>

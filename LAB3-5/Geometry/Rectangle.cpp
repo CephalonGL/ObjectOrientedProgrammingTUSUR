@@ -35,7 +35,8 @@ void Rectangle::SetLength(double length)
 	}
 	else
 	{
-		throw exception("Error: length < 0.");
+		throw exception("Error: length must be more or equal to 0,"
+						" but it is less than 0.");
 	}
 }
 
@@ -52,29 +53,8 @@ void Rectangle::SetWidth(double width)
 	}
 	else
 	{
-		// TODO: во всех классах принципиально разные подходы к сообщениям об ошибке. Сделать единообразно
-		throw exception("Error: width < 0.");
+		// TODO: во всех классах принципиально разные подходы к сообщениям об ошибке. Сделать единообразно +
+		throw exception("Error: width must be more or equal to 0,"
+						" but it is less than 0.");
 	}
-}
-
-Point& Rectangle::CalculateAverageCenterValue(vector<Rectangle> rectangles,
-											  int rectanglesCount)
-{
-	Point averageCenterValue(0, 0);
-	for (int i = 0; i < rectanglesCount; i++)
-	{
-		double newXCenter =
-			averageCenterValue.GetX() + rectangles[i].GetCenter().GetX();
-
-		double newYCenter =
-			averageCenterValue.GetY() + rectangles[i].GetCenter().GetY();
-
-		averageCenterValue = Point(newXCenter, newXCenter);
-	}
-	double xCenter = averageCenterValue.GetX() / rectanglesCount;
-	double yCenter = averageCenterValue.GetY() / rectanglesCount;
-
-	averageCenterValue = Point(xCenter, yCenter);
-
-	return averageCenterValue;
 }

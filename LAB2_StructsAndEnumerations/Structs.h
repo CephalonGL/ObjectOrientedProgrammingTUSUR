@@ -13,7 +13,7 @@ struct Rectangle
 struct Flight
 {
 	string DeparturePoint;
-	string DestinationPoint;
+	string Destination;
 	unsigned int FlightDurationMinutes;
 };
 

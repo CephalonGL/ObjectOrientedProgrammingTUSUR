@@ -18,5 +18,5 @@ public:
 	static void ShowCheckWithDiscount(DiscountBase* discount,
 									  vector<Product*> products);
 
-	static void DemoDiscount();
+	
 };

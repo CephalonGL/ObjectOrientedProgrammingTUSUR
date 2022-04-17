@@ -11,7 +11,8 @@ double Ring::AssertOnPositiveValue(double value)
 	}
 	else
 	{
-		throw exception("Error: value < 0");
+		throw exception("Error: value must be more or equal to 0,"
+						" but it is less than 0.");
 	}
 }
 

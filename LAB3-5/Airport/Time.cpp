@@ -2,20 +2,20 @@
 
 Time::Time()
 {
-	this->SetYear(0);
-	this->SetMonth(0);
-	this->SetDay(0);
-	this->SetHour(0);
-	this->SetMinute(0);
+	SetYear(0);
+	SetMonth(0);
+	SetDay(0);
+	SetHour(0);
+	SetMinute(0);
 }
 
 Time::Time(int year, int month, int day, int hour, int minute)
 {
-	this->SetYear(year);
-	this->SetMonth(month);
-	this->SetDay(day);
-	this->SetHour(hour);
-	this->SetMinute(minute);
+	SetYear(year);
+	SetMonth(month);
+	SetDay(day);
+	SetHour(hour);
+	SetMinute(minute);
 }
 
 int Time::GetYear()
@@ -27,7 +27,7 @@ void Time::SetYear(int year)
 {
 	if (year > 0)
 	{
-		this->_year = year;
+		_year = year;
 	}
 	else
 	{
@@ -45,7 +45,7 @@ void Time::SetMonth(int month)
 	if (month >= 1
 		&& month <= 12)
 	{
-		this->_month = month;
+		_month = month;
 	}
 	else
 	{
@@ -63,7 +63,7 @@ void Time::SetDay(int day)
 	if (day <= 30
 		&& day >= 1)
 	{
-		this->_day = day;
+		_day = day;
 	}
 	else
 	{
@@ -81,7 +81,7 @@ void Time::SetHour(int hour)
 	if (hour >= 0
 		&& hour <= 24)
 	{
-		this->_hour = hour;
+		_hour = hour;
 	}
 	else
 	{
@@ -99,7 +99,7 @@ void Time::SetMinute(int minute)
 	if (minute >= 0
 		&& minute <= 59)
 	{
-		this->_minute = minute;
+		_minute = minute;
 	}
 	else
 	{
@@ -121,6 +121,30 @@ bool Time::IsNull()
 	{
 		return false;
 	}
+}
+
+string Time::GetFormattedDate()
+{
+	string formattedDate = "";
+	if (GetDay() < 10)
+	{
+		formattedDate += "0";
+	}
+	formattedDate += GetDay();
+	formattedDate += ".";
+
+	if (GetMonth() < 10)
+	{
+		formattedDate += "0";
+		cout << "0" << GetMonth() << " ";
+	}
+	formattedDate += GetMonth();
+	return formattedDate;
+}
+
+string Time::GetFormattedTime()
+{
+	return string(GetHour() + ":" + GetMinute());
 }
 
 bool Time::operator==(Time& another)

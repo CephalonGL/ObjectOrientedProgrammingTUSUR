@@ -25,19 +25,19 @@ void DemoRectangle(float Length,
 }
 
 void DemoFlight(string DeparturePoint,
-				string DestinationPoint,
+				string Destination,
 				unsigned int FlightDurationMinutes)
 {
 	Flight flight;
 	flight.DeparturePoint = DeparturePoint;
-	flight.DestinationPoint = DestinationPoint;
+	flight.Destination = Destination;
 	flight.FlightDurationMinutes = FlightDurationMinutes;
 
 	cout << "DemoFlight" << endl << endl;
 	cout << "\tDeparture point: " << flight.DeparturePoint << '.' << endl;
-	cout << "\tDestination point: " << flight.DestinationPoint
+	cout << "\tDestination: " << flight.Destination
 		<< '.' << endl;
-	cout << "\tFlight duration: " << flight.DestinationPoint
+	cout << "\tFlight duration: " << flight.Destination
 		<< " minutes." << endl << endl;
 }
 
@@ -240,34 +240,34 @@ void DemoDynamicFlight()
 		const int COUNT_OF_FLIGHTS = 4;
 		Flight* flights = new Flight[COUNT_OF_FLIGHTS];
 		flights[0].DeparturePoint = "Moscow";
-		flights[0].DestinationPoint = "Novosibirsk";
+		flights[0].Destination = "Novosibirsk";
 		flights[0].FlightDurationMinutes = 230;
 		cout << "Deprture point: " << flights[0].DeparturePoint;
-		cout << "\nDestination point: " << flights[0].DestinationPoint;
+		cout << "\nDestination point: " << flights[0].Destination;
 		cout << "\nFlight duration, minutes: "
 			<< flights[0].FlightDurationMinutes << endl;
 	
 		flights[1].DeparturePoint = "Tomsk";
-		flights[1].DestinationPoint = "Novosibirsk";
+		flights[1].Destination = "Novosibirsk";
 		flights[1].FlightDurationMinutes = 50;
 		cout << "Deprture point: " << flights[1].DeparturePoint;
-		cout << "\nDestination point: " << flights[1].DestinationPoint;
+		cout << "\nDestination point: " << flights[1].Destination;
 		cout << "\nFlight duration, minutes: "
 			<< flights[1].FlightDurationMinutes << endl;
 	
 		flights[2].DeparturePoint = "Krasnoyarsk";
-		flights[2].DestinationPoint = "Novosibirsk";
+		flights[2].Destination = "Novosibirsk";
 		flights[2].FlightDurationMinutes = 100;
 		cout << "Deprture point: " << flights[2].DeparturePoint;
-		cout << "\nDestination point: " << flights[2].DestinationPoint;
+		cout << "\nDestination point: " << flights[2].Destination;
 		cout << "\nFlight duration, minutes: "
 			<< flights[2].FlightDurationMinutes << endl;
 	
 		flights[3].DeparturePoint = "Novosibirsk";
-		flights[3].DestinationPoint = "Krasnodar";
+		flights[3].Destination = "Krasnodar";
 		flights[3].FlightDurationMinutes = 240;
 		cout << "Deprture point: " << flights[3].DeparturePoint;
-		cout << "\nDestination point: " << flights[3].DestinationPoint;
+		cout << "\nDestination point: " << flights[3].Destination;
 		cout << "\nFlight duration, minutes: "
 			<< flights[3].FlightDurationMinutes << endl;
 
@@ -287,14 +287,14 @@ void FindShortestFlight(Flight* flights,
 			< shortestFlight.FlightDurationMinutes)
 		{
 			shortestFlight.DeparturePoint = flights[i].DeparturePoint;
-			shortestFlight.DestinationPoint = flights[i].DestinationPoint;
+			shortestFlight.Destination = flights[i].Destination;
 			shortestFlight.FlightDurationMinutes = 
 				flights[i].FlightDurationMinutes;
 		}
 	}
 	cout << "Departure point: " << shortestFlight.DeparturePoint << endl;
 	cout << "Destination point: " 
-		<< shortestFlight.DestinationPoint << endl;
+		<< shortestFlight.Destination << endl;
 	cout << "Flight duration, minutes: " 
 		<< shortestFlight.FlightDurationMinutes << endl;
 }
@@ -359,7 +359,7 @@ Flight* MakeFlight(string departurePoint,
 {
 	Flight* newFlight = new Flight;
 	newFlight->DeparturePoint = departurePoint;
-	newFlight->DestinationPoint = destinationPoint;
+	newFlight->Destination = destinationPoint;
 	newFlight->FlightDurationMinutes = flightDurationMinutes;
 	return newFlight;
 }
@@ -368,7 +368,7 @@ Flight* CopyFlight(Flight& flightToCopy)
 {
 	Flight* newFlight = new Flight;
 	newFlight->DeparturePoint = flightToCopy.DeparturePoint;
-	newFlight->DestinationPoint = flightToCopy.DestinationPoint;
+	newFlight->Destination = flightToCopy.Destination;
 	newFlight->FlightDurationMinutes = flightToCopy.FlightDurationMinutes;
 	return newFlight;
 }

@@ -43,8 +43,7 @@ public:
 	Time GetDestinationTime();
 	void SetDestinationTime(Time destinationTime);
 
-	// TODO: этот метод относиться к клиентскому коду, и не должен быть частью класса
-	static void DemoFlightWithTime();
+	
 
 	Time GetFlightTime();
 };

@@ -34,7 +34,8 @@ void Album::SetReleaseYear(int releaseYear)
 	}
 	else
 	{
-		throw exception("Error: release year is out of range.");
+		throw exception("Error: release year must be more or equal to 0,"
+						" but it is less than 0.");
 	}
 }
 

@@ -31,8 +31,6 @@ public:
 
 	void SetWidth(double width);
 
-	// TODO: это клиентский код, а не часть класса
-	static Point& CalculateAverageCenterValue(vector<Rectangle> rectangles,
-											 int rectanglesCount);
+	
 };
 

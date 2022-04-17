@@ -163,6 +163,9 @@
     <ClInclude Include="Geometry\Rectangle.h" />
     <ClInclude Include="Geometry\Ring.h" />
     <ClInclude Include="Geometry\Validator.h" />
+    <ClInclude Include="ProgramBand.h" />
+    <ClInclude Include="ProgramDiscount.h" />
+    <ClInclude Include="ProgramFlight.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Music\Album.h" />
     <ClInclude Include="Music\Band.h" />
@@ -342,6 +345,9 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
+    <ClCompile Include="ProgramBand.cpp" />
+    <ClCompile Include="ProgramDiscount.cpp" />
+    <ClCompile Include="ProgramFlight.cpp" />
     <ClCompile Include="Route.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>

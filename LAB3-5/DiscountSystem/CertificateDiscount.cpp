@@ -28,19 +28,18 @@ void CertificateDiscount::SetAmountRoubles(int amountRoubles)
 
 double CertificateDiscount::CalculateCost(Product* product)
 {
-	if (product->GetCategory() == this->GetCategory())
+	if (product->GetCategory() == GetCategory())
 	{
-		if (product->GetCostRoubles() <= this->GetAmountRoubles())
+		if (product->GetCostRoubles() <= GetAmountRoubles())
 		{
-			this->SetAmountRoubles(
-				this->GetAmountRoubles() - product->GetCostRoubles());
+			SetAmountRoubles(
+				GetAmountRoubles() - product->GetCostRoubles());
 			return 0.0;
 		}
 		else
 		{
-			int cost =
-				product->GetCostRoubles() - this->GetAmountRoubles();
-			this->SetAmountRoubles(0);
+			int cost = product->GetCostRoubles() - GetAmountRoubles();
+			SetAmountRoubles(0);
 			return cost;
 		}
 	}

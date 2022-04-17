@@ -26,7 +26,7 @@ void GeometricProgram::DemoRectangleWithPoint()
 			<< "Width = " << rectangles[i].GetWidth() << "; " << endl;
 	}
 	Point averageCenterValue =
-		Rectangle::CalculateAverageCenterValue(
+		GeometricProgram::CalculateAverageCenterValue(
 			rectangles, RECTANGLES_COUNT);
 	cout << "Xcenter = " << averageCenterValue.GetX() << "; "
 		<< "Ycenter = " << averageCenterValue.GetY() << endl;
@@ -78,4 +78,25 @@ void GeometricProgram::DemoCollision()
 	rings.push_back(Ring(3.0, 7.0, Point(10.0, 10.0)));
 	cout << "Are rings 2 and 3 have collision: " <<
 		CollisionManager::IsCollision(rings[2], rings[3]);
+}
+
+Point& GeometricProgram::CalculateAverageCenterValue(vector<Rectangle> rectangles, int rectanglesCount)
+{
+	Point averageCenterValue(0, 0);
+	for (int i = 0; i < rectanglesCount; i++)
+	{
+		double newXCenter =
+			averageCenterValue.GetX() + rectangles[i].GetCenter().GetX();
+
+		double newYCenter =
+			averageCenterValue.GetY() + rectangles[i].GetCenter().GetY();
+
+		averageCenterValue = Point(newXCenter, newXCenter);
+	}
+	double xCenter = averageCenterValue.GetX() / rectanglesCount;
+	double yCenter = averageCenterValue.GetY() / rectanglesCount;
+
+	averageCenterValue = Point(xCenter, yCenter);
+
+	return averageCenterValue;
 }

@@ -138,6 +138,15 @@
     <ClInclude Include="Geometry\Validator.h">
       <Filter>Header Files\Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="ProgramFlight.h">
+      <Filter>Header Files\Airport</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramBand.h">
+      <Filter>Header Files\Music</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramDiscount.h">
+      <Filter>Header Files\DiscountSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp">
@@ -220,6 +229,15 @@
     </ClCompile>
     <ClCompile Include="Geometry\Validator.cpp">
       <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgramFlight.cpp">
+      <Filter>Source Files\Airport</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgramBand.cpp">
+      <Filter>Source Files\Music</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgramDiscount.cpp">
+      <Filter>Source Files\DiscountSystem</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

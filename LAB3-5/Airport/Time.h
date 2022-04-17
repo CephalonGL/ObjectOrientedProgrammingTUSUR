@@ -38,6 +38,9 @@ public:
 	void SetMinute(int minute);
 
 	bool IsNull();
+
+	string GetFormattedDate();
+	string GetFormattedTime();
 	
 	bool operator == (Time& another);
 };

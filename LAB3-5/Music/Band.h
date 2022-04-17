@@ -1,6 +1,9 @@
 #pragma once
 
-// TODO: вектор хранение и передача по значению или по ссылке? Или по указателю? Во всех методах
+// TODO: вектор хранение и передача по значению или по ссылке? Или по указателю? Во всех методах <???>
+// 
+// Нужно максимально соблюсти единообразие или допускается использование ссылок и указателей одновременно?
+
 class Band
 {
 private:
@@ -15,35 +18,29 @@ public:
 
 	Band();
 
-	Band(string name,
-		 string description,
-		 vector<Album> albums);
+	Band(string& name, 
+		 string& description,
+		 vector<Album>& albums);
 
 	string GetName();
 
-	void SetName(string name);
+	void SetName(string& name);
 
 	string GetDescription();
 
-	void SetDescription(string description);
+	void SetDescription(string& description);
 
 	vector<Album> GetAlbums();
 
-	void SetAlbums(vector<Album> albums);
+	void SetAlbums(vector<Album>& albums);
 
 
-
-	Song* FindSong(string name);
+	Song* FindSong(string& name);
 
 	Album* FindAlbum(Song* song);
 
 	vector<Song>* GetAllSongs();
 
 	vector<Song>* GetAllGenreSongs(Genre findingGenre);
-
-
-
-	static void DemoBand();
-
 };
 

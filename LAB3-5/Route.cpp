@@ -81,7 +81,9 @@ int ReadRoutesCount()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect routes count. Repeat, please.\n");
+			//BUG: ¬ынести константы и заменить строки на константы
+			Console::WriteLine("Error: routes count must be in range if "
+							   "3 to 5. Repeat, please.\n");
 		}
 	}
 }
@@ -97,7 +99,8 @@ int ReadRouteNumber()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect route number. Repeat, please.\n");
+			Console::WriteLine("Error: route number must be more than 0."
+							   " Repeat, please.\n");
 		}
 	}
 }
@@ -114,7 +117,8 @@ int ReadRouteDurationMinutes()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect duration. Repeat, please.\n");
+			Console::WriteLine("Error: duration must be more than 0."
+							   " Repeat, please.\n");
 		}
 	}
 }
@@ -131,7 +135,8 @@ int ReadBusRouteIntervalInMinutes()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect interval. Repeat, please.\n");
+			Console::WriteLine("Error: interval must be more than 0."
+							   " Repeat, please.\n");
 		}
 	}
 }
@@ -148,7 +153,8 @@ int ReadStopsCount()
 		}
 		else
 		{
-			Console::WriteLine("Incorrect count. Repeat, please.\n");
+			Console::WriteLine("Errro: count must be more than 0."
+							   " Repeat, please.\n");
 		}
 	}
 }

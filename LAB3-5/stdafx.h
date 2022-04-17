@@ -1,4 +1,5 @@
 #pragma once
+//BUG: Линковка
 #include <iostream>
 #include <string>
 #include <vector>
