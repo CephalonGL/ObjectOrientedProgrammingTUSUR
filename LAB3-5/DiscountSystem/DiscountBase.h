@@ -1,5 +1,8 @@
 #pragma once
 
+/// <summary>
+/// 
+/// </summary>
 class DiscountBase
 {
 private:
@@ -16,7 +19,5 @@ public:
 	virtual double CalculateCost(Product* product) = 0;
 
 	static void ShowCheckWithDiscount(DiscountBase* discount,
-									  vector<Product*> products);
-
-	
+									  vector<Product*>& products);
 };

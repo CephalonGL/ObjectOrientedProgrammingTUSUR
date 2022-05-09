@@ -12,7 +12,7 @@ Flight::Flight(int number,
 			   Time destinationTime)
 {
 	SetNumber(number);
-	SetDeparturePoint(departurePoint);
+	SetDeparture(departurePoint);
 	SetDepartureTime(departureTime);
 	SetDestination(destination);
 	SetDestinationTime(destinationTime);
@@ -43,7 +43,7 @@ string Flight::GetDeparture()
 	return _departure;
 }
 
-void Flight::SetDeparturePoint(string departurePoint)
+void Flight::SetDeparture(string departurePoint)
 {
 	this->_departure = departurePoint;
 }

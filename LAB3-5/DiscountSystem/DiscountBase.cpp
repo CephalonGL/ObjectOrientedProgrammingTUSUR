@@ -16,7 +16,7 @@ CategoryType DiscountBase::GetCategory()
 }
 
 void DiscountBase::ShowCheckWithDiscount(DiscountBase* discount,
-										 vector<Product*> products)
+										 vector<Product*>& products)
 {
 	int fullCostRoubles = 0;
 	for (int i = 0; i < products.size(); i++)
