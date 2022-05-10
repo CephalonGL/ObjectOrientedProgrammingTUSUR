@@ -11,10 +11,10 @@ Teacher::Teacher(string name,
 
 TeacherPosition Teacher::GetPost()
 {
-	return _post;
+	return _position;
 }
 
 void Teacher::SetTeacherPost(TeacherPosition post)
 {
-	_post = post;
+	_position = post;
 }

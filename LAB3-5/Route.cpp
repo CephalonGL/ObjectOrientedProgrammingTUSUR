@@ -20,7 +20,7 @@ void ReadRouteFromConsole(Route& route)
 {
 	Console::WriteLine("Enter route info:\n");
 	route.Number = ReadRouteNumber();
-	route.DurationInMinutes = ReadRouteDurationMinutes();
+	route.DurationInMinutes = ReadRouteDurationInMinutes();
 	route.BusRouteIntervalInMinutes = ReadBusRouteIntervalInMinutes();
 	route.StopsCount = ReadStopsCount();
 	for (int i = 0; i < route.StopsCount; i++)
@@ -105,7 +105,7 @@ int ReadRouteNumber()
 	}
 }
 
-int ReadRouteDurationMinutes()
+int ReadRouteDurationInMinutes()
 {
 	while (true)
 	{

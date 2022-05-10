@@ -2,7 +2,7 @@
 
 void DemoBook()
 {
-	int booksCount = ReadBookCount();
+	int booksCount = ReadBooksCount();
 	vector<Book> books;
 	for (int i = 0; i < booksCount; i++)
 	{
@@ -22,8 +22,8 @@ void ReadBookFromConsole(Book& book)
 	book.Name = Console::ReadString("Enter name: ");
 	book.ReleaseYear = ReadReleaseYear();
 	book.PageCount = ReadPageCount();
-	book.AuthorCount = ReadAuthorCount();
-	for (int i = 0; i < book.AuthorCount; i++)
+	book.AuthorsCount = ReadAuthorsCount();
+	for (int i = 0; i < book.AuthorsCount; i++)
 	{
 		book.Authors[0] = Console::ReadString("Enter author: ");
 	}
@@ -31,10 +31,10 @@ void ReadBookFromConsole(Book& book)
 
 void WriteBookToConsole(Book& book)
 {
-	for (int i = 0; i < book.AuthorCount; i++)
+	for (int i = 0; i < book.AuthorsCount; i++)
 	{
 		cout << book.Authors[i];
-		if (i == book.AuthorCount - 1)
+		if (i == book.AuthorsCount - 1)
 		{
 			cout << ". ";
 		}
@@ -53,11 +53,11 @@ void WriteBookToConsole(Book& book)
 	cout << endl;
 }
 
-int FindBookByAuthor(vector<Book>& books, int booksCount, string author)
+int FindBookByAuthor(vector<Book>& books, int booksCount, string& author)
 {
 	for (int i = 0; i < booksCount; i++)
 	{
-		for (int j = 0; j < books[i].AuthorCount; j++)
+		for (int j = 0; j < books[i].AuthorsCount; j++)
 		{
 			if (author == books[i].Authors[j])
 			{
@@ -105,7 +105,7 @@ int ReadPageCount()
 	}
 }
 
-int ReadAuthorCount()
+int ReadAuthorsCount()
 {
 	while (true)
 	{
@@ -117,14 +117,13 @@ int ReadAuthorCount()
 		}
 		else
 		{
-			//BUG: ¬ынести константы и заменить строки на константы
 			Console::WriteLine("Error: authors count bust be in range of"
 							   " 1 to 10. Repeat, please.\n");
 		}
 	}
 }
 
-int ReadBookCount()
+int ReadBooksCount()
 {
 	while (true)
 	{
@@ -136,7 +135,6 @@ int ReadBookCount()
 		}
 		else
 		{
-			//BUG: ¬ынести константы и заменить строки на константы
 			Console::WriteLine("Error: count of books must be in range of "
 							   "1 to 6. Repeat, please.\n");
 		}
