@@ -84,7 +84,8 @@ Ring Ring::MakeRing(double innerRadius,
 {
 	try
 	{
-		return Ring(2.0, 2.1, Point(2.2, 1.0));
+		Point point(2.2, 1.0);
+		return Ring(2.0, 2.1, point);
 	}
 	catch (const exception& error)
 	{

@@ -30,14 +30,20 @@ public:
 	Album();
 
 	// TODO: при передаче вектора по значению будет создаваться его локальная копия? +
-	// Да, будет. Передачу string тоже заменил на &.
+	// Да, будет. 
+
+	// Передачу string не везде могу заменить на ссылку, т.к.
+	// иначе методы будут требовать левостороннее значение в качестве
+	// аргумента(придётся объявлять переменную под входноый аргумент в
+	// клиентском коде).
+
 	/// <summary>
 	/// Creates album with name, release year and songs
 	/// </summary>
 	/// <param name="name">Name</param>
 	/// <param name="releaseYear">Release year</param>
 	/// <param name="songs">Songs</param>
-	Album(string& name,
+	Album(string name,
 		  int releaseYear,
 		  vector<Song>& songs);
 

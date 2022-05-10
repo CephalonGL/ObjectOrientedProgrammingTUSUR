@@ -57,7 +57,7 @@ void WriteBookToConsole(Book& book);
 /// <returns>Index of rearchable book</returns>
 int FindBookByAuthor(vector<Book>& books,
 					 int booksCount,
-					 string& author);
+					 string author);
 
 /// <summary>
 /// Read release year from console and check it

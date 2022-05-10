@@ -4,7 +4,7 @@ Album::Album()
 {
 }
 
-Album::Album(string& name, int releaseYear, vector<Song>& songs)
+Album::Album(string name, int releaseYear, vector<Song>& songs)
 {
 	SetName(name);
 	SetReleaseYear(releaseYear);

@@ -1,5 +1,7 @@
 #include "../stdafx.h"
 
+using namespace std;
+
 void GeometricProgram::DemoRectangleWithPoint()
 {
 	vector<Rectangle> rectangles;
@@ -47,7 +49,8 @@ void GeometricProgram::DemoRing()
 	}
 	cout << "Count of rings before constructor call: "
 		<< Ring::GetAllRingsCount() << endl;
-	Ring* ring = new Ring(10.0, 5.0, Point(25.0, 25.0));
+	Point point(25.0, 25.0);
+	Ring* ring = new Ring(10.0, 5.0, point);
 	cout << "Count of rings after constructor call: "
 		<< Ring::GetAllRingsCount() << endl;
 	delete ring;
@@ -58,24 +61,34 @@ void GeometricProgram::DemoRing()
 void GeometricProgram::DemoCollision()
 {
 	vector<Rectangle> rectangles;
-	rectangles.push_back(Rectangle(10.0, 4.0, Point(0.0, 0.0)));
-	rectangles.push_back(Rectangle(8.0, 6.0, Point(3.0, 2.0)));
+	vector<Point> rectanglesCenterPoints;
+	rectanglesCenterPoints[0] = Point(0.0, 0.0);
+	rectangles.push_back(Rectangle(10.0, 4.0, rectanglesCenterPoints[0]));
+	rectanglesCenterPoints[1] = Point(3.0, 2.0);
+	rectangles.push_back(Rectangle(8.0, 6.0, rectanglesCenterPoints[1]));
 	cout << "Are rectangles 0 and 1 have collision: " <<
 		CollisionManager::IsCollision(rectangles[0], rectangles[1]);
 
-	rectangles.push_back(Rectangle(3.0, 3.0, Point(10.0, 10.0)));
-	rectangles.push_back(Rectangle(4.0, 4.0, Point(0.0, 0.0)));
+	rectanglesCenterPoints[2] = Point(10.0, 10.0);
+	rectangles.push_back(Rectangle(3.0, 3.0, rectanglesCenterPoints[2]));
+	rectanglesCenterPoints[3] = Point(0.0, 0.0);
+	rectangles.push_back(Rectangle(4.0, 4.0, rectanglesCenterPoints[3]));
 	cout << "Are rectangles 2 and 3 have collision: " <<
 		CollisionManager::IsCollision(rectangles[2], rectangles[3]);
 
 	vector<Ring> rings;
-	rings.push_back(Ring(2.0, 5.0, Point(3.0, 3.0)));
-	rings.push_back(Ring(1.0, 4.0, Point(3.0, 8.0)));
+	vector<Point> ringsCenterPoints;
+	ringsCenterPoints[0] = Point(3.0, 3.0);
+	rings.push_back(Ring(2.0, 5.0, ringsCenterPoints[0]));
+	ringsCenterPoints[1] = Point(3.0, 8.0);
+	rings.push_back(Ring(1.0, 4.0, ringsCenterPoints[1]));
 	cout << "Are rings 0 and 1 have collision: " <<
 		CollisionManager::IsCollision(rings[0], rings[1]);
 
-	rings.push_back(Ring(4.0, 5.0, Point(0.0, 0.0)));
-	rings.push_back(Ring(3.0, 7.0, Point(10.0, 10.0)));
+	ringsCenterPoints[2] = Point(0.0, 0.0);
+	rings.push_back(Ring(4.0, 5.0, ringsCenterPoints[2]));
+	ringsCenterPoints[3] = Point(10.0, 10.0);
+	rings.push_back(Ring(3.0, 7.0, ringsCenterPoints[3]));
 	cout << "Are rings 2 and 3 have collision: " <<
 		CollisionManager::IsCollision(rings[2], rings[3]);
 }

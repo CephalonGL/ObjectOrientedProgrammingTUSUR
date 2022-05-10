@@ -53,7 +53,7 @@ void WriteBookToConsole(Book& book)
 	cout << endl;
 }
 
-int FindBookByAuthor(vector<Book>& books, int booksCount, string& author)
+int FindBookByAuthor(vector<Book>& books, int booksCount, string author)
 {
 	for (int i = 0; i < booksCount; i++)
 	{

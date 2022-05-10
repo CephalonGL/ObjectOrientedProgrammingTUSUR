@@ -4,7 +4,9 @@ Band::Band()
 {
 }
 
-Band::Band(string& name, string& description, vector<Album>& albums)
+Band::Band(string name, 
+		   string description, 
+		   vector<Album>& albums)
 {
 	SetName(name);
 	SetDescription(description);

@@ -39,8 +39,8 @@ public:
 	/// <param name="name">Name</param>
 	/// <param name="description">Description</param>
 	/// <param name="albums">Albums</param>
-	Band(string& name, 
-		 string& description,
+	Band(string name, 
+		 string description,
 		 vector<Album>& albums);
 
 	/// <summary>

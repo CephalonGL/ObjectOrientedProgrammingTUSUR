@@ -67,6 +67,8 @@ public:
 	/// <returns>Password</returns>
 	const string& GetPassword();
 
+	// Не могу сделать передачу строк по ссылке, т.к. иначе 
+	// конструктор будет требовать левостороннее значение 
 	/// <summary>
 	/// Creates new user and fills fields
 	/// </summary>
@@ -74,8 +76,8 @@ public:
 	/// <param name="login">Login</param>
 	/// <param name="password">Password</param>
 	User(int id, 
-		 string& login, 
-		 string& password);
+		 string login, 
+		 string password);
 
 	/// <summary>
 	/// Check if password correct

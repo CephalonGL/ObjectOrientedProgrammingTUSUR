@@ -42,7 +42,9 @@ const string& User::GetLogin() { return _login; }
 
 const string& User::GetPassword() { return _password; }
 
-User::User(int id, string& login, string& password)
+User::User(int id, 
+		   string login, 
+		   string password)
 {
 	SetId(id);
 	SetLogin(login);
