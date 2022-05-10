@@ -16,7 +16,7 @@ string Album::GetName()
 	return _name;
 }
 
-void Album::SetName(string name)
+void Album::SetName(string& name)
 {
 	_name = name;
 }

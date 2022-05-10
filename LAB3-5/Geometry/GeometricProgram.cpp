@@ -80,7 +80,7 @@ void GeometricProgram::DemoCollision()
 		CollisionManager::IsCollision(rings[2], rings[3]);
 }
 
-Point& GeometricProgram::CalculateAverageCenterValue(vector<Rectangle> rectangles, int rectanglesCount)
+Point& GeometricProgram::CalculateAverageCenterValue(vector<Rectangle>& rectangles, int rectanglesCount)
 {
 	Point averageCenterValue(0, 0);
 	for (int i = 0; i < rectanglesCount; i++)
