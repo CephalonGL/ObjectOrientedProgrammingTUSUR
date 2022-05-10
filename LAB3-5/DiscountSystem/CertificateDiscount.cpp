@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../DiscountSystem/CertificateDiscount.h"
 
 CertificateDiscount::CertificateDiscount(CategoryType category,
 										 int amountDiscountRoubles)

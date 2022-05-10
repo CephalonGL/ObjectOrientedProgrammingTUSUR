@@ -1,4 +1,5 @@
 #pragma once
+#include "../DiscountSystem/CategoryType.h"
 
 /// <summary>
 /// Class for good's

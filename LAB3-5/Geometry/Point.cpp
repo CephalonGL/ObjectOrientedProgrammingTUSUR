@@ -1,4 +1,5 @@
-#include "..\stdafx.h"
+#include "../stdafx.h"
+#include "../Geometry/Point.h"
 
 Point::Point(double x, 
 			 double y)

@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../Geometry/GeometricProgram.h"
 
 using namespace std;
 

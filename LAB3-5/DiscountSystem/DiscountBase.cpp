@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../DiscountSystem/DiscountBase.h"
 
 void DiscountBase::SetCategory(CategoryType category)
 {

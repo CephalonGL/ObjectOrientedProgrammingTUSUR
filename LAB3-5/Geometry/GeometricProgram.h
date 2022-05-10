@@ -1,4 +1,8 @@
 #pragma once
+#include "../Geometry/Validator.h"
+#include "../Geometry/Rectangle.h"
+#include "../Geometry/Ring.h"
+#include "../Geometry/CollisionManager.h"
 
 /// <summary>
 /// Class of user interface for geometry classes

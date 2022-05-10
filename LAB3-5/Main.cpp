@@ -1,7 +1,12 @@
 #include "stdafx.h"
+#include "Book.h"
+#include "Route.h"
 #include "ProgramFlight.h"
 #include "ProgramDiscount.h"
 #include "ProgramBand.h"
+#include "Users/UserProgram.h"
+#include "University/PersonProgram.h"
+#include "Geometry/GeometricProgram.h"
 
 int main()
 {

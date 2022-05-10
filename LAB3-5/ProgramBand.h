@@ -1,4 +1,5 @@
 #pragma once
+#include "Music/Band.h"
 
 /// <summary>
 /// User interface for Band class

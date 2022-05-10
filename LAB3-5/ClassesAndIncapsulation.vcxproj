@@ -176,11 +176,11 @@
     <ClInclude Include="University\PersonProgram.h" />
     <ClInclude Include="University\Student.h" />
     <ClInclude Include="University\Teacher.h" />
-    <ClInclude Include="University\TeacherPost.h" />
+    <ClInclude Include="University\TeacherPosition.h" />
     <ClInclude Include="Users\PaidUser.h" />
     <ClInclude Include="Users\Post.h" />
     <ClInclude Include="Users\User.h" />
-    <ClInclude Include="Users\UserInterface.h" />
+    <ClInclude Include="Users\UserProgram.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Airport\Flight.cpp">
@@ -430,7 +430,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="Users\UserInterface.cpp">
+    <ClCompile Include="Users\UserProgram.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>

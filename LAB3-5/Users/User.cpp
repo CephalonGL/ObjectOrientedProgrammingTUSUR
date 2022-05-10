@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../Users/User.h"
 
 void User::SetId(int id)
 {

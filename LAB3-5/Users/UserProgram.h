@@ -1,4 +1,6 @@
 #pragma once
+#include "../Users/User.h"
+#include "../Users/PaidUser.h"
 
 // TODO: интерфейс - это иная сущность в ООП, для именования пользовательского интерфейса её лучше не использовать +
 /// <summary>

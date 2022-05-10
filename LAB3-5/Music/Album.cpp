@@ -1,4 +1,5 @@
-#include "..\stdafx.h"
+#include "../stdafx.h"
+#include "../Music/Album.h"
 
 Album::Album()
 {

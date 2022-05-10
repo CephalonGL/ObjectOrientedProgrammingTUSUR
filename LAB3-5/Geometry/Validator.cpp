@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../Geometry/Validator.h"
 
 bool Validator::IsValuePositive(double value)
 {

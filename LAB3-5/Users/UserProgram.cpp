@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../Users/UserProgram.h"
 
 User* UserProgram::Login(User** users,
 						   int usersCount,

@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../DiscountSystem/PercentDiscount.h"
 
 PercentDiscount::PercentDiscount(CategoryType category, int percent)
 	: DiscountBase(category)

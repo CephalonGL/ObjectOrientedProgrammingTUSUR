@@ -1,4 +1,5 @@
 #pragma once
+#include "../DiscountSystem/Product.h"
 
 /// <summary>
 /// Base class for discounts

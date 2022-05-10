@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "Book.h"
 
 void DemoBook()
 {

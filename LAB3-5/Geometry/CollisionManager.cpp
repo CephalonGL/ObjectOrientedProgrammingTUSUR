@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../Geometry/CollisionManager.h"
 
 double CollisionManager::GetDeltaX(Point& first,
 								   Point& second)

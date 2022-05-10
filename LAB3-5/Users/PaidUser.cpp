@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../Users/PaidUser.h"
 
 void PaidUser::SetPosts(Post* posts, int postsCount)
 {

@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../DiscountSystem/Product.h"
 
 Product::Product(string name, CategoryType category, int costRoubles)
 {

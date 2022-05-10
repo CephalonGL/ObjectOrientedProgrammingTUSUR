@@ -1,4 +1,5 @@
 #pragma once
+#include "../University/Person.h"
 
 /// <summary>
 /// Student of university

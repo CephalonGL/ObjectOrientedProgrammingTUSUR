@@ -1,5 +1,7 @@
 #pragma once
 #include "stdafx.h"
+#include "DiscountSystem/PercentDiscount.h"
+#include "DiscountSystem/CertificateDiscount.h"
 
 /// <summary>
 /// Class of user interface for discount

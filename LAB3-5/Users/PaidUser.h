@@ -1,4 +1,5 @@
 #pragma once
+#include "../Users/User.h"
 
 /// <summary>
 /// Website paid user

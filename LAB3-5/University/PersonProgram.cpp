@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../University/PersonProgram.h"
 
 void PersonProgram::DemoName(Person* person)
 {

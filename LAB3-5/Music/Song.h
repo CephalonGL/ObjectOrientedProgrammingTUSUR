@@ -1,4 +1,5 @@
 #pragma once
+#include "../Music/Genre.h"
 
 /// <summary>
 /// Musical composition

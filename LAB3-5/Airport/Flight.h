@@ -1,4 +1,5 @@
 #pragma once
+#include "../Airport/Time.h"
 
 // TODO: а вас на СД не заставляли комментировать код? +
 

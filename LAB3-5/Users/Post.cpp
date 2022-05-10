@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../Users/Post.h"
 
 void Post::SetTitle(string title)
 {

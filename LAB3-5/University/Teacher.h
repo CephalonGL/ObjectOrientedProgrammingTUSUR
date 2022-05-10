@@ -1,4 +1,6 @@
 #pragma once
+#include "../University/Person.h"
+#include "../University/TeacherPosition.h"
 
 /// <summary>
 /// Teacher of university

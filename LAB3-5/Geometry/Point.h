@@ -1,4 +1,5 @@
 #pragma once
+#include "../Geometry/Validator.h"
 
 /// <summary>
 /// Geometric point on plane XOY

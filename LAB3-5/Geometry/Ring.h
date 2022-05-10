@@ -1,4 +1,6 @@
 #pragma once
+#include "../Geometry/Validator.h"
+#include "../Geometry/Point.h"
 
 using namespace std;
 

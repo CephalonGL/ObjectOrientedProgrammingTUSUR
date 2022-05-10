@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "Music/Album.h"
 #include "ProgramBand.h"
 
 void BandProgram::DemoBand()

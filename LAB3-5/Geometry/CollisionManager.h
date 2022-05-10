@@ -1,6 +1,8 @@
 #pragma once
 #include "../stdafx.h"
+#include "../Geometry/Validator.h"
 #include "../Geometry/Rectangle.h"
+#include "../Geometry/Ring.h"
 
 /// <summary>
 /// Checker for collisions of geometric figures

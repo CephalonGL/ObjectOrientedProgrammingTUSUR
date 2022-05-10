@@ -102,7 +102,7 @@
     <ClInclude Include="Users\User.h">
       <Filter>Header Files\Users</Filter>
     </ClInclude>
-    <ClInclude Include="Users\UserInterface.h">
+    <ClInclude Include="Users\UserProgram.h">
       <Filter>Header Files\Users</Filter>
     </ClInclude>
     <ClInclude Include="University\Person.h">
@@ -117,7 +117,7 @@
     <ClInclude Include="University\Teacher.h">
       <Filter>Header Files\University</Filter>
     </ClInclude>
-    <ClInclude Include="University\TeacherPost.h">
+    <ClInclude Include="University\TeacherPosition.h">
       <Filter>Header Files\University</Filter>
     </ClInclude>
     <ClInclude Include="DiscountSystem\CategoryType.h">
@@ -212,7 +212,7 @@
     <ClCompile Include="Users\User.cpp">
       <Filter>Source Files\Users</Filter>
     </ClCompile>
-    <ClCompile Include="Users\UserInterface.cpp">
+    <ClCompile Include="Users\UserProgram.cpp">
       <Filter>Source Files\Users</Filter>
     </ClCompile>
     <ClCompile Include="DiscountSystem\CertificateDiscount.cpp">

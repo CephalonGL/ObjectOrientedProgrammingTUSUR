@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../University/Teacher.h"
 
 Teacher::Teacher(string name,
 				 string surname,

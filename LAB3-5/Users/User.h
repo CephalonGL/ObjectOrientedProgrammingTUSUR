@@ -1,4 +1,5 @@
 #pragma once
+#include "../Users/Post.h"
 
 /// <summary>
 /// Website user

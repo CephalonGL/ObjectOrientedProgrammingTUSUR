@@ -1,4 +1,5 @@
-#include "..\stdafx.h"
+#include "../stdafx.h"
+#include "../Airport/Time.h"
 
 Time::Time()
 {

@@ -1,4 +1,5 @@
 #include "../stdafx.h"
+#include "../University/Person.h"
 
 Person::Person(string name,
 			   string surname,

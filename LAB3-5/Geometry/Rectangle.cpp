@@ -1,4 +1,5 @@
-#include "..\stdafx.h"
+#include "../stdafx.h"
+#include "../Geometry/Rectangle.h"
 
 Rectangle::Rectangle(double length, double width, Point& center)
 {

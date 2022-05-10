@@ -1,4 +1,5 @@
 #pragma once
+#include "../Music/Song.h"
 
 /// <summary>
 /// Album of songs

@@ -1,4 +1,5 @@
-#include "..\stdafx.h"
+#include "../stdafx.h"
+#include "../Geometry/Ring.h"
 
 int Ring::_allRingsCount = 0;
 

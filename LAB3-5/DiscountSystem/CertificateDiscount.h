@@ -1,4 +1,5 @@
 #pragma once
+#include "../DiscountSystem/DiscountBase.h"
 
 /// <summary>
 /// Discount certificate for amount
